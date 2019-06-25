@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Prediction is very difficult, especially about the future. --- Niels Bohr">
+<meta name="description" content="Prediction is very difficult, especially about the future. --- Niels Bohr Alpha ModelsGenerally, it is used as a way to quantify the skill of an investor or the return she delivers independently of th">
 <meta name="keywords" content="inside the black box">
 <meta property="og:type" content="article">
 <meta property="og:title" content="alpha">
 <meta property="og:url" content="http://yoursite.com/2019/06/25/alpha/index.html">
 <meta property="og:site_name" content="MyBlog">
-<meta property="og:description" content="Prediction is very difficult, especially about the future. --- Niels Bohr">
+<meta property="og:description" content="Prediction is very difficult, especially about the future. --- Niels Bohr Alpha ModelsGenerally, it is used as a way to quantify the skill of an investor or the return she delivers independently of th">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-25T01:29:06.682Z">
+<meta property="og:updated_time" content="2019-06-25T03:38:05.976Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="alpha">
-<meta name="twitter:description" content="Prediction is very difficult, especially about the future. --- Niels Bohr">
+<meta name="twitter:description" content="Prediction is very difficult, especially about the future. --- Niels Bohr Alpha ModelsGenerally, it is used as a way to quantify the skill of an investor or the return she delivers independently of th">
 
 
 
@@ -331,6 +331,25 @@
 
       
         <p><code>Prediction is very difficult, especially about the future. --- Niels Bohr</code></p>
+<h2 id="Alpha-Models"><a href="#Alpha-Models" class="headerlink" title="Alpha Models"></a>Alpha Models</h2><p>Generally, it is used as a way to quantify the skill of an investor or the return she delivers independently of the moves in the broader market. Alpha models are merely a systematic approach to adding skill (in timing the selection and/or sizing of portfolio holdings) to the investment process in order to make profits. For example, a trend-following trader’s ability to systematically identify trends that will persist into the future represents one type of skill that can generate profits.   All successful alpha models are designed to have some edge, which allows them to anticipate the future with enough accuracy that, after allowing for being wrong at least sometimes and for the cost of trading, they can still make money. In a sense, of the various parts of a quant strategy, the alpha model is the optimist, focused on making money by predicting the future. </p>
+<h3 id="Types-of-Alpha-Models-Theory-Driven-and-Data-Driven"><a href="#Types-of-Alpha-Models-Theory-Driven-and-Data-Driven" class="headerlink" title="Types of Alpha Models: Theory-Driven and Data Driven"></a>Types of Alpha Models: Theory-Driven and Data Driven</h3><p>Theoretical scientists try to make sense of the world around them by hypothesizing why it is the way it is. They start with observations of the markets, think of a generalized theory that could explain the observed begavior, and then rigorously test it with market data to see if the teory is shown to be either unture or supported by the outcome of the test. </p>
+<p>Empirical scientists believe that enough observations of the world can allow them to predict future patterns of behavior, even if there is no hypothesis to rationalize the behavior in an intuitive way. </p>
+<h4 id="Theory-Driven-Alpha-Models"><a href="#Theory-Driven-Alpha-Models" class="headerlink" title="Theory-Driven Alpha Models"></a>Theory-Driven Alpha Models</h4><p>Most of what theory-driven quants do can be relatively easily fit into one of six classes of phenomena: trend, reversion, technical sentiment, value/yield, growth, and quality. These six categories can be further understood by examining the data that they use: price-related data and fundamental data. </p>
+<ul>
+<li>price-related data: trend, mean reversion, technical sentiment </li>
+<li>fundamental data: value/yield, growth/sentiment, quality </li>
+</ul>
+<p><strong>Trend Following</strong>  Trend followers typically look for a significant  move in a given direction in an instrument. They bet that, once a significant move has occurred, it will persist because this significant move is a likely sign of a growing consensus. There are many ways to defining what kind of move is significant, and the most common terms used to describe this act of definition are <code>filtering</code> and <code>conditioning</code>, e.g., only if the volumes that were associated with the price movements were significant, whereas a low-volume trend might be ignored.  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">$ CTA </span><br><span class="line">$ Risk: The returns of this strategy are streaky and highly variable</span><br><span class="line">$ Idea: Make enough money <span class="keyword">in</span> the good <span class="built_in">times</span> and manage the downside well enough <span class="keyword">in</span> the bad <span class="built_in">times</span> to make the whole exercise worthwhile</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">__Mean Reversion__ Mean reversion traders must identify the current mean or equilibrium and <span class="keyword">then</span> must determine what amount of divergence from that equilibrium is sufficient to warrant a trade.  Interesting, trend and mean reversion strategies are not necessarily at odds with each other. Longer-term trends can occur, even as smaller oscillations around these trends occur <span class="keyword">in</span> the shorter term.  In fact, some quants use both of these strategies <span class="keyword">in</span> conjunction. </span><br><span class="line">``` bash </span><br><span class="line">$ <span class="built_in">stat</span> arb</span><br><span class="line">$ Risk: Any time that the market regime changes, the relationships among instruments frequently also change, <span class="built_in">which</span> can lead the system to mistakenly group things together, even though they no longer will behave like each other</span><br><span class="line">$ Idea: Relative attractiveness analysis </span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">__Technical Sentiment__  An indicator of future returns. </span><br><span class="line">``` bash </span><br><span class="line">$ Example 1: Look at the volume of puts and calls. If puts have higher volumes r.t. calls than they normally <span class="keyword">do</span>, it might be an indicator that investors are worrried about a downturn. </span><br><span class="line">$ Example 2: Implied vols of puts vs calls. </span><br><span class="line">$ Example 3: Shape of <span class="built_in">limit</span> order book (Short-term); trading volume, turnover (Long-term).</span><br></pre></td></tr></table></figure>
+
+<p><strong>Value/Yield</strong> There are many metrics that people use to describe value in various asset classes, but most of them end up being ratios of some fundamental factor versus the price of the instrument,  e.g., E/P ratio.  Value investing is often done on a relative basis: buying the undervalued security and selling the overvalued one against it, this stratefy is also known as a <code>carry trade</code> in currencies and in bonds, and <code>quant long/short</code> in equities.  </p>
+<p><strong>Growth/Sentiment &amp; Quality</strong>  Similar to Value/Yield Strategy except for the indicators used. </p>
+<h4 id="Data-Driven-Alpha-Models"><a href="#Data-Driven-Alpha-Models" class="headerlink" title="Data-Driven Alpha Models"></a>Data-Driven Alpha Models</h4><p>These strategies look at current market conditions, searching the history for similar conditions, detemining the probabilities of various outcomes in the aftermath of that setup, and making trades in accordance with the probabilities.  Many HFTs favor an entirely empirical, data-mining approach when designing their short-term trading strategies. </p>
+<h2 id="Implementing-the-Strategies"><a href="#Implementing-the-Strategies" class="headerlink" title="Implementing the Strategies"></a>Implementing the Strategies</h2><p>There are not many ways for alpha-focused traders to make money. But the limited selection of sources of alpha does not imply that all quants choose one of a handful of phenomena and then have a peer group to which they are substantively identical. There is in fact considerable diversity among alpha traders. This diversity stems from the way quants implement their strategies, including </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ forecast target</span><br><span class="line">$ time horizon</span><br><span class="line">$ bet structure </span><br><span class="line">$ investment universe</span><br><span class="line">$ model specification</span><br><span class="line">$ run frequency</span><br></pre></td></tr></table></figure>
+
+<p>Forecast target can be the direction, magnitude, and/or duration of a move and furthermore can include an assignment of confidence or probability for their forecast.  Time horizon can be high-frequency (no further than the end of the current trading day), short-term (one day to two weeks), medium-term (a few weeks to a few months) and long-term (several months or longer).  Bet structure can be made to forecast either an instrument in itself or an instrument relative to others (e.g., pairs or sectors). A given strategy can be implemented in a variety of instruments, and the quant can choose which ones to include or exclude according to geography, asset class, insturement class, liquidity, predictable e.t., al.   Moreover, there could be multiple ways for quants to define a trend, and determine the run frequency. </p>
+<h2 id="Blending-Alpha-Models"><a href="#Blending-Alpha-Models" class="headerlink" title="Blending Alpha Models"></a>Blending Alpha Models</h2><p>Each of the decisions a quant makes in defining a trading strategy is an important driver of its behavior. The quant is not limited to choosing just one approach to a given alpha model. Instead, he is equally free to choose to employ multiple types of alpha models. The method used to combine these alpha models is an arena rich with possibilities. The most sophisticated and successful quants tend to utilize several kinds of alpha strategies, including trend and reversion, and various kinds of fundamental approaches across a variety of time horizons, trade structures, instruments, and geographies. Such quants benefit from alpha diversification in exactly the same way that diversification is helpful in so many other aspects of financial life.  The three most common quant approaches to blending forecasts are via linear models, nonlinear models (conditioning, filtering) and machine learning models. A siginificant fourth school of thought believes that alpha models should not be combined at all. Instead, several portfolios are constructed, each based on the output from a given alpha model. These factor portfolios are then combined using any of the portfolio construction techniques.  Each of these four approaches to signal mixing has its disciples, and the best way to blend alphas depends on the model itself. </p>
 
       
     </div>
@@ -417,8 +436,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -469,6 +497,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Alpha-Models"><span class="nav-number">1.</span> <span class="nav-text">Alpha Models</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Types-of-Alpha-Models-Theory-Driven-and-Data-Driven"><span class="nav-number">1.1.</span> <span class="nav-text">Types of Alpha Models: Theory-Driven and Data Driven</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Theory-Driven-Alpha-Models"><span class="nav-number">1.1.1.</span> <span class="nav-text">Theory-Driven Alpha Models</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Data-Driven-Alpha-Models"><span class="nav-number">1.1.2.</span> <span class="nav-text">Data-Driven Alpha Models</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Implementing-the-Strategies"><span class="nav-number">2.</span> <span class="nav-text">Implementing the Strategies</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Blending-Alpha-Models"><span class="nav-number">3.</span> <span class="nav-text">Blending Alpha Models</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
