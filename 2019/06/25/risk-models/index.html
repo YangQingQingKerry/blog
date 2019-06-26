@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Quant Trading,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="The market can remain irrational longer than you can remain solvent — John Maynard Keynes   Risk management should not be thought of solely as the avoidance of risk or reduction of loss. It is about">
+<meta name="keywords" content="Quant Trading">
+<meta property="og:type" content="article">
+<meta property="og:title" content="risk models">
+<meta property="og:url" content="http://yoursite.com/2019/06/25/risk-models/index.html">
+<meta property="og:site_name" content="MyBlog">
+<meta property="og:description" content="The market can remain irrational longer than you can remain solvent — John Maynard Keynes   Risk management should not be thought of solely as the avoidance of risk or reduction of loss. It is about">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-06-26T08:07:01.474Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="risk models">
+<meta name="twitter:description" content="The market can remain irrational longer than you can remain solvent — John Maynard Keynes   Risk management should not be thought of solely as the avoidance of risk or reduction of loss. It is about">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/06/25/risk-models/">
+
+
+
+
+
+  <title>risk models | MyBlog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MyBlog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/25/risk-models/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kerry Yang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MyBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">risk models</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-25T19:53:50+08:00">
+                2019-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Inside-the-Black-Box/" itemprop="url" rel="index">
+                    <span itemprop="name">Inside the Black Box</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>The market can remain irrational longer than you can remain solvent — John Maynard Keynes </p>
+</blockquote>
+<p>Risk management should not be thought of solely as the avoidance of risk or reduction of loss. It is about the intentional selection and sizing of exposures to improve the quality and consistency of returns.   </p>
+<blockquote>
+<p>Relative alpha strategy: value/yield<br><strong>Risk</strong>: Cheap (Higher-yield) stocks underperform expensive (lower-yield) stocks.</p>
+</blockquote>
+<p>The risk is inherent to the pursuit of a value strategy, even if the quant has reason to believe that value strategies should make money in the long term. However, <strong>a value strategy without further specification can end up taking significant sector bets in addition to the intentional bet on value. But there is no evidence that there exists a long-term benefit of overweighting one industry or sector versus another.</strong> More important, assume that the stratey has neither the intention nor the capability to forecast the performance of various sectors. Therefore, sector exposure would be considered a form of risk in our framework, because sector performance is not being intentionally forecast, but having net exposure to various sectors can alter the strategy’s results day to day. <strong>So the key to understanding risk exposures as they related to quant trading strategies is that risk exposures are those that are not intentionally sought out by the nature of whatever forecast the quant is making in the alpha model</strong>.    If alpha models are like optimists, risk models are like pessimists. Risk models exist largely to control the size of desirable exposures or to deal with undesirable types of exposures. Their job is to raise hell about things that can cause losses or uncertainty, particularly those bets that are unintentionally made or are incidental byproducts of the alpha model. Risk models both highlight and attempt to remove undersirable exposures from a portfolio. </p>
+<blockquote>
+<p>There are, however, only a few things you can do with a given type of exposure, aside from simply accepting it outright. Mostly you can limit its size or eliminate it altogether. The function of risk management in the investment process is to determine which of these courses of action is most prudent for each kind of exposure and to provide that input to the portfolio construction model. </p>
+</blockquote>
+<h2 id="Limiting-the-Amount-of-Risk"><a href="#Limiting-the-Amount-of-Risk" class="headerlink" title="Limiting the Amount of Risk"></a>Limiting the Amount of Risk</h2><blockquote>
+<p>How risk is measured? </p>
+</blockquote>
+<p>There are two generally accepted ways of measuring the amount of risk in the marketplace: <em>volatility</em> and <em>dispersion</em>.  Volatility is longitudinal and measures risk by computing the standard deviation of the returns of various instruments over time, which is a way of getting at the concept of uncertainty. Dispersion measures the level of similarity in the behavior of the various instruments within a given investment universe. This is frequently calculated by taking the <strong>cross-sectional</strong> standard deviation of all the relevant instruments for a given period. The larger the standard deviation, the more varied the underlying instruments are behaving. This means that the market is less risky because the portfolio can be made of a larger number of diversified bets. Dispersion can also be measured by the correlation or covariance among the instruments in a given universe. There are many other approaches to measuring risk as well: credit spreads or credit default swaps, or the use of implied volatilities. </p>
+<blockquote>
+<p>The manner in which size is limited. </p>
+</blockquote>
+<p>Size-limiting models can be used to govern many kinds of exposures. One can limit the size of single positions and/or groups of positions, such as sectors or asset classes. Alternatively, one can limit the size of exposure to various types of risks. For example, in equity trading, one can limit the exposure of a model to market bets or to market capitalization bets. <strong>In general, risks that are subjected to limits or penalties are those that are not being forecast explicitly by the alpha model.</strong>  Another component of a risk model may be to govern the amount of <strong>overall portfolio leverage</strong>. The most common tool used for this purpose is known as a <em>value at risk</em> (VaR) model.  The way that this model controls risk in the face of rising volatility is to reduce leverage.  One issue bears mentioning is that volatility isn’t a constant over time. If a quant is goof at forecasting volatility or dispersion, there are far more interesting and productive ways to utilize these forecasts (for example, in the options markets) than there are in a risk model that governs leverage. A more theoretically sound approach, though substantially harder to implement practically, seeks to increase leverage when the strategy has better odds of winning and to decrease risk when the strategy has worse odds. The trick is to know when the odds are on one’s side. Some quants solve this problem by allowing the level of leverage to vary with the overall strength and certainty of the predictions from the alpha model, which seems to be a reasonable approach. </p>
+<blockquote>
+<p>What is having its size limited? </p>
+</blockquote>
+<p>Approaches to the size limits come in two main forms: hard constraints and penalties. The levels of limits and/or penalties can be determined in the same ways as most other things in the quant world, namely either from theory or from the data. Theory-driven approaches mostly look like an arbitrary level that is set, tested, and, if needed, adjusted until it produces an acceptable outcomes. Data-driven approaches are more varied and can include machine learning techniques to test many combinations of limits or simply testing various limit levels and letting the historical data empirically determine the final outcome. </p>
+<h2 id="Limiting-the-Types-of-Risk"><a href="#Limiting-the-Types-of-Risk" class="headerlink" title="Limiting the Types of Risk"></a>Limiting the Types of Risk</h2><p>Revisiting an earlier  relative alpha strategy, the quant might not believe he has a valid way to forecast the returns of the sectors to which these equities belong. In this case, the quant may design his bet structures so that he is making forecasts of stocks’ returns <em>relative</em> to their sector’s returns, which means that he never has a bet on the direction of the sector itself (since there should be no expectation of being compensated sufficiently for accepting them), only on which stocks will outperform and which stocks will underperform the sector.  This, in turn, helps him eliminate sector bets, which is clearly a risk management exercise as much as it is alpha generation. As such, it is theoretically possible to incorporate all the needed components of his risk model fully into his alpha model by specifying the alpha model such that it <strong>only forecasts exactly the exposures from which it expects to make money and structures its bets to avoid exposure to nonforecasted factors</strong>. </p>
+<blockquote>
+<p>Theory-Driven Risk Models</p>
+</blockquote>
+<p>Theory-driven risk modeling typically focuses on named or <em>systematic</em> risk factors. Just as in the case of theory-driven alpha models, systematic risks that are derived from theory are those for which the quant can make a reasonable, economic argument. Theory-driven risk modeling uses a set of <strong>predefined systematic risks</strong>, which enables the quant to measure and calibrate a given portfolio’s exposures (systematic risks are those that cannot be diversified away: market, sector, market capitalization, et.al). </p>
+<blockquote>
+<p>Empirical Risk Models </p>
+</blockquote>
+<p>Empirical risk models are based on the same premise as theory-driven models, namely that systematic risks should be measured and mitigated. However, the empirical approach <strong>uses historical data to determine what these risks are and how exposed a given portfolio is to them</strong>. Using statistical techniques such as <strong>principal component analysis (PCA)</strong>, a quant is able to use historical data to discern systematic risk factors.  These statistical risk models are most commonly found among statistical arbitrage traders, who are betting on exactly that component of an individual stock’s returns that is not explained by systematic risks.  </p>
+<blockquote>
+<p>It is important to note that such statistical methods may discover entirely new systematic risk factors, which a reasonable observer might be inclined to acknowledge exist but for which names have not been assigned. On the other hand, statistical risk models are subject to being fooled by the data into finding a risk factor that will not persist for any useful amount of time into the future. It is also possible for a statistical risk model to find spurious exposures, which are just coincidences and not indicative of any real risk in the marketplace. </p>
+</blockquote>
+<p>Quants are attracted to theory-driven risk models because the risk factors they encapsulate make sense. Quants that choose empirical risk models typically seek the benefits of adaptiveness. Theoretical risk models are relatively rigid, meaning that the risk factors are not altered often (otherwise the thoery would not have been very strong in the first place). Yet the factors that drive markets do change over time. As markets evolve, the data that the markets produce reflect this evolution, and these data drive empirical risk models. For these reasons, an empirical model may be more adaptive to ever-changing market conditions by detecting through new data whatever factors are implicitly driving markets. There are two stages to this adaptation. </p>
+<div id="flowchart-0" class="flow-chart"></div>
+
+<p>Besides exhibiting a weakness during a regime change, a basic understanding of statistics reveals another problem with empirical risk models. To achieve statistical significance and reduce the potential for measurement error in computing relationships among various instruments, empirical risk models require a rather large amount of data. But this leads to a trade-off that could squelch most of the adaptiveness benefits of empirical risk model, which would be addressed, somehow, by using intraday data.<br>It is worth noting that these two kinds of risk models are not mutually exclusive.  Managers might use their judgement and discretion to monitor market behavior and, should it become clear to them that theire is a new risk factor that is driving markets, they build a made-to-order risk factor to measure this temporary phenomenon. When they see that the new driver has faded in importance, they can remove it from the risk model, again using their judgment. </p>
+<blockquote>
+<p> If the theoretical risk models are any good at being right, an empirical model should capture these effects without having to know the names of the factors beforehand. If market risk is indeed a big driver of stock prices, an empirical model should pick this up from the data. If the data don’t bear it out, what good is the theory? Most premade risk models, e.g., BARRA, Northfield, Axioma, and Quantal, are not of the empirical variety because empirical solutions require a specifically set universe of instruments, and the analytical techniques are usually relatively easy to implement with simple price data. </p>
+</blockquote>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">s=>start: use now irrelevant historical data to determine relationships and measure risk factors
+o=>condition:  new behavior persists?
+e=>end: catch up to the newly prevailing theme driving markets
+s->o(yes)->e</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script>
+      
+    </div>
+    
+    
+    
+
+        <div>
+    
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------End of File<i class="fa fa-paw"></i>Thanks for your reading-------------</div>
+    
+</div>
+    
+        </div>
+
+
+    
+
+    
+
+    
+
+    
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Quant-Trading/" rel="tag"><i class="fa fa-tag"></i> Quant Trading</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/25/alpha/" rel="next" title="alpha">
+                <i class="fa fa-chevron-left"></i> alpha
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/26/portfolio-construction-models/" rel="prev" title="portfolio construction models">
+                portfolio construction models <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Kerry Yang</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Limiting-the-Amount-of-Risk"><span class="nav-number">1.</span> <span class="nav-text">Limiting the Amount of Risk</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Limiting-the-Types-of-Risk"><span class="nav-number">2.</span> <span class="nav-text">Limiting the Types of Risk</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kerry Yang</span>
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  Visitor<span id="busuanzi_value_site_uv">|</span>
+</span>
+</div>
+
+  
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
