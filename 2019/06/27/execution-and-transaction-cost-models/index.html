@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Quant Trading,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Quality is never an accident; it is always the result of high intention, sincere effort, intelligent direction and skillful execution — William A.Foster   Transaction Cost ModelsThe idea behind trans">
+<meta name="keywords" content="Quant Trading">
+<meta property="og:type" content="article">
+<meta property="og:title" content="execution and transaction cost models">
+<meta property="og:url" content="https://yangqingqingkerry.github.io/blog/2019/06/27/execution-and-transaction-cost-models/index.html">
+<meta property="og:site_name" content="MyBlog">
+<meta property="og:description" content="Quality is never an accident; it is always the result of high intention, sincere effort, intelligent direction and skillful execution — William A.Foster   Transaction Cost ModelsThe idea behind trans">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-06-27T08:05:54.296Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="execution and transaction cost models">
+<meta name="twitter:description" content="Quality is never an accident; it is always the result of high intention, sincere effort, intelligent direction and skillful execution — William A.Foster   Transaction Cost ModelsThe idea behind trans">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://yangqingqingkerry.github.io/blog/2019/06/27/execution-and-transaction-cost-models/">
+
+
+
+
+
+  <title>execution and transaction cost models | MyBlog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MyBlog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/blog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/blog/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/blog/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/blog/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yangqingqingkerry.github.io/blog/blog/2019/06/27/execution-and-transaction-cost-models/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kerry Yang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MyBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">execution and transaction cost models</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-27T12:56:39+08:00">
+                2019-06-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Inside-the-Black-Box/" itemprop="url" rel="index">
+                    <span itemprop="name">Inside the Black Box</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>Quality is never an accident; it is always the result of high intention, sincere effort, intelligent direction and skillful execution — William A.Foster </p>
+</blockquote>
+<h2 id="Transaction-Cost-Models"><a href="#Transaction-Cost-Models" class="headerlink" title="Transaction Cost Models"></a>Transaction Cost Models</h2><p>The idea behind transaction cost models is that it costs money to trade. In the world of quant trading, there are only two reasons to make a trade: i) It improves the odds or magnitude of making money; ii) It reduces the odds or magnitude of losing money.  The transaction cost models are not designed to minimize the cost of trading, only to inform the portfolio construction engine of the costs of making any given trade. The part of the black box that minimizes costs is the execution algorithm. Transaction costs have three major components: </p>
+<blockquote>
+<p>Commissions and Fees<br>Slippage<br>Market Impact </p>
+</blockquote>
+<p><strong>Commissions and Fees</strong> Commissions are not the only costs charged by brokerage and exchanges. Brokers charge fees (which are usually a component of the commissions) for services known as <em>clearning</em> and <em>settlement</em>. Clearing involves regulatory reporting and monitoring, tax handling, and handling failure, all of which are activities that must take place in advance of settlement.  Settlement is the delivery of securities in exchange for payment in full, which is the final step in the life of a trading transaction and fulfills the obligations of both parties involved in the transaction. </p>
+<p><strong>Slippage</strong> Slippage is the change in the price between the time a trader (or quant system) decides to transact and the time when the order is actually at the exchange for execution. The market is constantly moving, but a trading decision is made as of a specific point in time. As time passes between the decision being made and the trade being executed, the instrument being forecast is likely to be moving away from the price at which it was quoted when the forecast was made. In fact, the more accurate the forecast, the more likely it is that the price of the instrument is actually going toward the expected price as more time passes. But the instrument makes this move without the trader benefiting, because he has not yet gotten his trade to market. </p>
+<blockquote>
+<p>Strategies that tend to suffer most from slippage are those that pursue trend-following strategies, because they are seeking to buy and sell instruments that are already moving in the desired direction. Strategies that tend to suffer least from slippage, and for which slippage can sometimes be a positive, are those that are mean reverting in orientation, because these strategies are usually trying to buy and sell instruments that are moving against them when the order is placed. </p>
+</blockquote>
+<p>Slippage is a function of time, which depends on the trader’s latency or speed to market, the prevailing trend and the volatility of the instrument being forecast. Slippage is not a major factor for instuments with low-volatility, however, it can be a major issue for the ones with high-volatility. </p>
+<p><strong>Market Impact</strong> Market impact is a measurement of how much a given order moves the market by its demand for liquidity.  Market impact is normally defined as the difference between the price at the time a market order enters the exchange and the price at which the trade is actually executed. Factors that affect market impact include </p>
+<ul>
+<li>Size of the order relative to the liquidity present at the time</li>
+<li>Imbalance between supply and demand for the instrument being executed </li>
+<li>The number of order trades that are being made in the same direction at the same time</li>
+<li>Whether news in the stock is causing impact to behave differently from normal</li>
+</ul>
+<p>Questions like <em>Did a quant trader’s sell order slow the rise of the prevailing trend somewhat, and if so, by how much?</em> need to be answered when building transaction cost models. </p>
+<h3 id="Types-of-Transaction-Cost-Models"><a href="#Types-of-Transaction-Cost-Models" class="headerlink" title="Types of Transaction Cost Models"></a>Types of Transaction Cost Models</h3><p>There are four basic types of transaction cost models:</p>
+<blockquote>
+<p>flat<br>linear<br>piecewise-linear<br>quadratic </p>
+</blockquote>
+<p>Regardless of the type of model used, the quant must describe the cost of trading each instrument in her universe. After all, a less liquid small cap stock is likely to be more expensive to trade than a more liquid mega cap stock, and that must be a factor in deciding how much of each to trade. Furthermore, the quant should refresh empirical estimations of transaction costs both to keep the model current with the prevailing market conditions as well as to indicate when more research is required to improve the model itself. </p>
+<h2 id="Execution"><a href="#Execution" class="headerlink" title="Execution"></a>Execution</h2><p>There are two basic ways to execute a trade: either electronically or through a human intermediary (e.g., a broker). Electronic execution is accomplished through <em>direct market access</em> (DMA), which allows traders to utilize the infrastructure and exchange connectivity of their brokerage firms to trade directly on electronic markets such as <em>electronic communication networks</em> (ECNs).  Traders could call their brokers to work their orders—pick the best times, sizes, and prices, or occasionally contacting other counterparties to negotiate a better price on a large block trade, or acquire execution algorithms to work on them. Execution algorithms contain the logic used to get an order completed, including instructions about how to slice up an order into smaller pieces (to minimize market impact), or how to respond to various kinds of changes in the limit order book and price behavior. One can acquire execution algorithms in one of the three ways: built them, use the broker’s, or use a third-party software vendor’s. </p>
+<h3 id="Order-Execution-Algorithms"><a href="#Order-Execution-Algorithms" class="headerlink" title="Order Execution Algorithms"></a>Order Execution Algorithms</h3><p>Order execution algorithms determine the way in which systematic execution of a portfolio is actually done. The principle goal of execution algorithms, and the function of most execution desks in general, is to get the desired amount of a trade done as completely as possible and as cheaply as possible.  Cheapness has several facets, including market impact and slippage. One driver of both impact and slippage is what is known as a footprint, which refers to a detectable pattern of behavior by a market participant. If an order execution algorithm leaves an obvious footprint, its activities become predictable to other market participants, and these other participants may well react in such a way as to increase the market impact and slippage incurred by such an algorithm.   </p>
+<blockquote>
+<p>Benchmark: VWAP<br><strong>VWAP</strong>: The most standard benchmark for judging the quality of an execution algorithm over multiple trades.<br><strong>Idea</strong>:  VWAP may give a fair sense of how  the day’s volumes were priced.<br><strong>Trouble</strong>: Some investors may be fooled by looking at VWAP. If a buyer of stock executes huge volumes during some days, his volumes will most likely increase the price of that stock, and the VWAP. As such, his own activities impact the benchmark against which his execution algorithm is measured,  making the interpretation of this benchmark tricky. </p>
+</blockquote>
+<p>The major considerations that go into the making of an order working algorithm are as follows: </p>
+<blockquote>
+<p>Whether to be aggressive or passive<br>What type of order to utilize<br>How to determine the ideal order size<br>Where to sent it</p>
+</blockquote>
+<p><strong>Aggressive versus Passive</strong>  The level of aggressiveness is usually a function of the type of strategy being employed and depends on the strength of the signal, the system’s confidence in that signal, and sometimes also on considerations from the order book, such as order imbalance. </p>
+<blockquote>
+<p><strong>Strategies</strong><br>It is generally ture that alpha strategies that are based on a concept of momentum will be paired with execution strategies that are more aggressive, because the market can tend to run away from the trader if he is not aggressive. It is also generally the case that mean reversion strategies utilize more passive execution strategies because they are taking the risk that the prevailing trend persists, and at least by executing at a better price, this mitigates the downside risk of standing in front of the steamroller. </p>
+</blockquote>
+<blockquote>
+<p><strong>Signal</strong><br>If you had inside information that a stock was going to double in the next day because some other company was set to announce an acquisition of the stock in question at a large premium, and if trading on inside information was legal (which of couse is not), you should be perfectly happy to pay a lot of money to the marketplace to fill a large order to buy this stock. It would be illogical to fret over a few pennies per share when many dollars are the upside. On the other hand, if you have no view on a stock but were being asked what you’d be willing to pay for it by someone who wants to sell it, you are likely to offer a low enough price that there is some margin of safety. </p>
+</blockquote>
+<p><strong>Order Types</strong> </p>
+<blockquote>
+<p><strong>Hidden order</strong>: 
+Hidden orders are a way to mask one’s limit orders from the market, at the cost of losing priority versus visible orders at the same price. Placing a hidden order provides no information to the market, which helps reduce the market’s perception of imbalances. One algorithmic trading technique that utilizes hidden orders is known as iceberging. </p>
+</blockquote>
+<blockquote>
+<p><strong>Market-on-Close order</strong><br>Release the order as a market order during the closing auction for that day.</p>
+</blockquote>
+<blockquote>
+<p><strong>Stop limit order</strong><br>Enter a limit order at a predetermined price, but to wait until the instrument trades at that price before entering the order.</p>
+</blockquote>
+<blockquote>
+<p><strong>Good-till-canceled order</strong><br>A limit order that is not automatically canceled at the end of the day but remains in effect for days or weeks, until explicitly canceled by the trader. </p>
+</blockquote>
+<p> <strong>Large Order versus Small Order</strong> How much of a total order to send at once? By spreading the order out over time, the trader runs the risk that the price may move more while the order is being spreading out than it would have if it had been executed right away, even with the extra cost of market impact.  Generally, however, it is agreed that spreading out trades is a useful way to reduce the cost if transacting, and this is an extremely common feature in execution algorithms. </p>
+<blockquote>
+<p>The determination of the size of each order is related to the analysis of the correct level of aggressiveness. Again, a highly attractive trade warrants taking on more of it quickly than a trade that is relatively less appealing. But if not, this much aggressiveness in the order placement might not be necessary, and the transaction can be executed in a different manner. For example, a trader might find that taking whatever liquidity is available at the best offer and then waiting for others to step in and offer the same price a moment later could allow the same volume of shares to be acquired at whatever the best offer was at the time that  the first piece of the order was executed, rather than a worse average price achieved by sweeoing through multiple levels of the order book. </p>
+</blockquote>
+<p> <strong>Where to Send an Order</strong> In some markets, there are several pools of liquidity for the same instruments. There is a whole field of work in the area of <em>smart order routing</em>, which involves determining to which pool of liquidity it is best to send a given order at the current moment.   </p>
+<h3 id="Dark-Pools"><a href="#Dark-Pools" class="headerlink" title="Dark Pools"></a>Dark Pools</h3><p> Exchanges can be categorized as being <em>lit</em> and <em>dark</em>. Lit exchanges show market participants the prices and sizes of bids and offers available in the limit order book. Dark exchanges provide no such information. The most relevant feature of a dark pool is that it facilitates the execution of large orders, because orders placed on a dark pool are note revealed.  Dark pools are created by brokers or independent firms to allow <strong>their customers</strong> to trade directly with each other in an anonymous way.  </p>
+<blockquote>
+<p>One a dark pool, there is no information provided about the limti order book, which contains all the liquidity being provided by market makers and other participants. Customers are simply posting their orders to the pool and if someone happens to want to do the opposite side of those orders, the orders get filled. As a result of this anonymous process of matching orders, the market is less likely to move as much as it would in a more public venue, where automated market making practitioners require compensation to take the other side of large orders. </p>
+</blockquote>
+<p> One fact that makes dark pool transactions somewhat unusual is that they are over-the-counter, off-exchange transactions in instruments that are exchanged traded. Dark pools could not exist without the public markets, because the securities traded on dark pools are listed on public exchanges. Furthermore, the public markets provide the only transparent sense of price discovery, without which dark pool participants would have a significantly harder time determining what prices to bid and offer.  Partly because of these issues, coupled with the fact dark pools are available only to selected customers, controversy surrounds dark pools. </p>
+<h2 id="Trading-Infrastructure"><a href="#Trading-Infrastructure" class="headerlink" title="Trading Infrastructure"></a>Trading Infrastructure</h2><p> To execute and process electronic trades, connectivity needs to be set up between the trader and the exchange. Furthermore, a protocol for messages between these two parties is required. The handware and software quants utilize in implementing their trading strategies are the final pieces of infrastructure.  As in most things, quants face a choice between building or buying infrastructure in all three of these areas.  Due to regulatory and other constraints, most traders utilize the services of independent brokerage firms that act as the trading agents for their strategies. One of the benefits of using a broker is that infrastructure requirements are handled by that broker, and this infrastructure can be costly to replicate. </p>
+<blockquote>
+<p><strong>DMA</strong>: causes between 10 and 30 milliseconds of delay between the time the order is sent from the quant’s server and the time the order reaches the exchange.</p>
+</blockquote>
+<blockquote>
+<p><strong>Colocation</strong>: have an order travel from the quant’s server to the exchange in a fraction of a millisecond. </p>
+</blockquote>
+<blockquote>
+<p> <strong>Financial Information sEchange (FIX)</strong>: a standardized way for various participants in the trading process to communicate information. </p>
+</blockquote>
+<blockquote>
+<p><strong>Hardware &amp; Software</strong>: attempt to make their algorithms, databases, and execution software leaner, to reduce the internal latency of processing market data and sending an order out to the market. </p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+        <div>
+    
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------End of File<i class="fa fa-paw"></i>Thanks for your reading-------------</div>
+    
+</div>
+    
+        </div>
+
+
+    
+
+    
+
+    
+
+    
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/blog/tags/Quant-Trading/" rel="tag"><i class="fa fa-tag"></i> Quant Trading</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2019/06/26/portfolio-construction-models/" rel="next" title="portfolio construction models">
+                <i class="fa fa-chevron-left"></i> portfolio construction models
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Kerry Yang</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/blog/archives/">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/blog/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/blog/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Transaction-Cost-Models"><span class="nav-number">1.</span> <span class="nav-text">Transaction Cost Models</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Types-of-Transaction-Cost-Models"><span class="nav-number">1.1.</span> <span class="nav-text">Types of Transaction Cost Models</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Execution"><span class="nav-number">2.</span> <span class="nav-text">Execution</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Order-Execution-Algorithms"><span class="nav-number">2.1.</span> <span class="nav-text">Order Execution Algorithms</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dark-Pools"><span class="nav-number">2.2.</span> <span class="nav-text">Dark Pools</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Trading-Infrastructure"><span class="nav-number">3.</span> <span class="nav-text">Trading Infrastructure</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kerry Yang</span>
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  Visitor<span id="busuanzi_value_site_uv">|</span>
+</span>
+</div>
+
+  
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
