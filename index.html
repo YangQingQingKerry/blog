@@ -249,6 +249,163 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yangqingqingkerry.github.io/blog/blog/2019/07/01/alpha-models/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kerry Yang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MyBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2019/07/01/alpha-models/" itemprop="url">alpha models</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-01T16:55:43+08:00">
+                2019-07-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Inside-the-Black-Box/" itemprop="url" rel="index">
+                    <span itemprop="name">Inside the Black Box</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          
+ Prediction is very difficult, especially about the future  — Niels Bohr
+
+Alpha ModelsThe first piece of quant trading system is its alpha model, whi
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/blog/2019/07/01/alpha-models/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+        <div>
+    
+        </div>
+
+
+    
+
+    
+
+    
+
+    
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://yangqingqingkerry.github.io/blog/blog/2019/06/30/research/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -342,75 +499,18 @@
       
         
           
-            <blockquote>
-<p>Everything should be made as simple as possible, but not simpler — Albert Einstein </p>
-</blockquote>
-<p>A characteristic shared among well-behaved quants is their adherence to the <em>scientific method</em> in conducting research, which is of course the way science is done in every other field of study. One important distinction, however, exists between quants and scientists. Scientists conduct research for many purposes, including learning the truth that drives the natural world. And in the natural sciences, a good theory does not require modification to continue to be valid (e.g., Einstein’s relativity). Quant researchers, by contrast, have no choice but to conduct ongoing research and to take every measure to ensure that their research output is prolific. This is because, though nature is relatively stable, the markets are not. Whether from regulatory changes, the changing whims of the aggregate psychology of investors and traders, the constant competition for alpha among traders, or whatever other phenomena, the markets are in fact highly dynamic processes. For this reason, quant traders must constantly conduct research so that they can evolve with as much rigor and forethought as they used in developing their original strategies. </p>
-<h2 id="Idea-Generation"><a href="#Idea-Generation" class="headerlink" title="Idea Generation"></a>Idea Generation</h2><p>Four common sources of ideas are: </p>
-<blockquote>
-<p>Observations of the markets<br>Academic literature<br>Migration<br>Lessons from the activities of discretionary traders </p>
-</blockquote>
-<p><strong>Observations of the market</strong><br>An excellent example comes from the history of the oldest of quant trading strategies: trend following in futures contracts. Richard Donchian is the father of trend following. He observed that there are sweeping moves in many markets that folks tend to call bull or bear markets; he postulated that one could build a system that would detect that these trends had begun and then ride the wave. He translated his philosophy into the following strategy: <font color="#0099ff" size="3" face="黑体">If a given market’s price is above the highest closing price over the past two weeks, buy that market. If its price goes below the lowest closing price over the past two weeks, sell that market short. In the meantime, hold whatever position you have in that market. </font></p>
-<p><strong>Lessons from the activities of discretionary traders</strong><br>An old adage among successful traders is <em>Ride winners and cut losers</em>. This idea can easily be formalized and tested and has come to be known as a <em>stop-loss policy</em>, which involves systematically realizing losses on positions that are not working out.  Technical trader is the lebel applied to a trader who subjectively analyzes graphs of market prices and makes decisions based on <em>rules</em> about the implications of various shapes of such graphs. These shapes are given names such as a <em>head and shoulders pattern</em> or an <em>upward triangle pattern</em>. </p>
-<h2 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h2><p><font color="#0099ff" size="4" face="黑体">In-Sample Testing and Training </font><br>In quant trading, models are approximations of the world. They are used to predict the future using data as inputs. The first part of the testing process is to <em>train</em> a model by finding optimal parameters over an in-sample period. Imagine that we want to test the idea that cheap stocks outperform expensive stocks. We even theorize that the metric we will use to define cheapness is the earnings yield (earnings/price), such that a higher earnings yield implies a cheaper stock. But what level of yield is sufficiently high to cause us to think that the stock will outperform? And what level of earnings yield is sufficiently low to imply that a stock is expensive and is likely to underperform? These levels are parameters. </p>
-<blockquote>
-<p><strong>Issues</strong>: In the real world, the quant’s model is constantly buffeted by new information and unpredictable events. But the historical data from the in-sample period are known to the model in theor entirety, and nothing about them needs to be predicted.  </p>
-</blockquote>
-<p>An important decision lies in the process of in-sample testing: What exactly constitutes the sample chosen for fitting the model?  A sample is characterized by two things: its breadth and its length. As far as the breadth of the in-sample test, the researcher must choose how many of the stocks to use and decide how to choose the ones that are used. Should she use a broad cross-section of stocks across sectors and capitalization levels? Should she use a narrower cross-section, or should she choose all the stocks? As to length of time, the researcher must consider what window of data will be available to use for fitting the model. Will it be the most recent data or the oldest data?  The most common perference among quants would be to use all the instruments for some subset of the time, but this is by no means universal, since there is a trade-off here to consider: By using more data, the quant has a broader array of scenarios and market events that the model has to fit itself to, which can help make it more robust. By the time it has to succeed in real conditions, it has already <em>seen</em> and been adapted to the scenarios and environments found in the large in-sample period. On the other hand, the more data the model is allowed to see while it is being tuned, the greater the risk of creating a model that is nothing more than a good explanation of the past. For this reason, many quants utilize a <font color="#0099ff" size="s" face="黑体">reasonable </font> cross-section of the data for the purpose of in-sample testing and model fitting. </p>
-<p><font color="#0099ff" size="4" face="黑体">What Constitutes a <em>Good</em> Model?  </font></p>
-<blockquote>
-<p>Example: Equity risk premium<br><strong>Strategy</strong>: Taking the difference between the earnings yield of the S&amp;P 500 and the 10-year Treasury note each day. If the S&amp;P’s yield is higher thatn the bond’s, this is viewed as a signal to be long stocks. If the S&amp;P’s yield is lower than the bond’s, this is a signal to be short stocks. </p>
-</blockquote>
-<p> <strong>Metrics to determine the <em>goodness</em> of a model</strong></p>
-<ol>
-<li><strong>Graph of the cumulative profits over time</strong> One picture is worth a thousand words. From a graph of cumulative profits, you can see whether the strategy would have made money, how smoothly, and with what sort of downside risk, just to name a few things. </li>
-<li><strong>Average Rate of Return</strong>The average rate of return indicates how well the strategy actually worked in the past. If it didn’t work in the testing phase, it’s very unlikely to work in real life. </li>
-<li><strong>Variability of Returns Over Time</strong> The variability of returns over time is helpful in deciding whether the strategy is worth owning. In general, the less the variability for a given level of returns, the better a strategy is considered to be. The idea is that one can have more confidence in a given return if the uncertainty around it is low, and more confidence is a good thing. </li>
-<li><strong>Lumpiness</strong> Lumpiness is the portion of a strategy’s total return that comes from periods that are significantly above average. This is another way of measuring <em>consistency</em> of returns. Despite the importance of thie metric, it is not always the case that consistency should be a primary goal. </li>
-<li><strong>Worst Peak-to-Valley Drawdown(s)</strong>  The metric measures the maximum decline from any cumulative peak in the profit curve. The lower the drawdown of a strategy, the better. Many quants measure not just one drawdown but several, to get a sense of both the extreme and more routine downside historical risks of their strategies. It’s also typical to measure recovery times after drawdowns, which give the researcher a sense of the model’s behavior after it’s done poorly. Drawdown information must be handled with care of <em>sample bias</em>, which can be handled with <em>resampling</em>. </li>
-<li><strong>Predictive Power</strong>  A statistic known as the <em>R-squared</em> shows how much of the variability of the thing being predicted can be accounted for by the thing you’re using to predict it, or, in other words, how much of the variability in the targets is explained by the signal.  Quants frequently utilize an additional approach to ascertaining predictive power. This approach involves <em>bucketing</em> the returns of the instruments included in the test by the deciles (or any other quantile prefered by the researcher) of the underlying forecasts. In general, a model with reliable predictive power is one that demonstrates that the worst returns are found in the bucket for which the worst returns are expected, with each successive bucket of improving expected returns in fact performing better than the prior bucket. If the returns of the instruments being forecast are not monotonically improving w ith the forecast of them, it could be an indication that the strategy is working purely by accident. </li>
-<li><strong>Percentage Winning Trades or Winning Time Periods</strong>This percentage is another measure of consistency. It tells the researcher whether the system tends to make its profits from a small portion of the trades that happened to do very well or from a large number of trades, each of which might contribute only modestly to the bottom line. In both cases, one tends to have more confidence in strategies with greater consistency. </li>
-<li><strong>Various Ratios of Return versus Risk</strong> Sharp ratio, Information ratio,  Sterling ration (average return divided by the variability of below-average returns), Calmar ratio (average return divided by the worst peak-to-valley drawdown), and the Omega ratio (the sum of all positive returns divided by the sum of all negative returns). </li>
-<li><strong>Relationship with Other Strategies</strong> Many quants utilize several kinds of strategies at once. As such, the quant is effectively managing a <em>portfolio of strategies</em>. Comparing the results of the existing strategy with and without the new idea. A significant improvement in the results indicates that there is a synergistic relationship between the new idea and the existing strategy. </li>
-<li><strong>Time Dacay</strong> Many quants will seek to understand what their strategies’ returns would be if they must initiate trades on a lagged basis after they receive a trading signal.   <font color="#0099ff" size="3" face="黑体">Imagine that a researcher develops a strategy to trade stocks in response to changes in recommendations by Wall Street analysts. Increases in the level of analyst’s consensus recommendations for a company lead to a targeted long position in that company, whereas deterioration in the aggregate recommendation level would lead to a targeted short position in the company. This strategy is popular and followed by many quants. However, its effects are very short-lived and are very sensitive to the timing of the information received, since the downgrades/upgrades all take place before the market opened.</font>  As such, the quant trader must be careful not to allow his simulation to assume that he was able to transaction early enough to capture any of the information. </li>
-</ol>
-<ol start="11">
-<li><strong>Sensitivity to Specific Parameters</strong>  If E/P strategy results in a significantly different outcome  with slightly differing parameters, we should mistrust both results and use neither in out model. What many researchers look for is smoothness of the goodness of outcomes with respect to parameter values. Near-neighboring sets of parameters should result in fairly similar results, and if they don’t, a researcher should be a bit suspicious about them, because such results may indicate <em>overfitting</em>.</li>
-</ol>
-<p><font color="#0099ff" size="4" face="黑体">Overfitting </font><br>Overfitting a mode essentially implies that the researcher is asking too much of the data. The more classical defination is that a researcher has built a model that closely explains the past, but which is a pool guide to the future. This can happen in several ways. </p>
-<blockquote>
-<p>The researcher must be careful about the complexity of a model</p>
-</blockquote>
-<p>Complexity in a model can come from a couple of sources. One is the number of predictive factors. </p>
-<blockquote>
-<p>A researcher can create a very complex model in terms of the conditionalities utilized</p>
-</blockquote>
-<p>A simple model might call for a long position to be initiated in an instrument if that instrument is up more than some amount over the past 10 days. A more complex model might call for the long position to be initiated if the instrument is down over the past one day, up over the past 10 days, down over the past 20 days, and up over the past 100 days…<br>A related type of overfitting can be seen in strategies that trade only extremely infrequently. Here, we are concerned with the problem that a small number of trades, no matter how profitable, is unlikely to provide strong statistical significance.</p>
-<blockquote>
-<p>Specification of parameters</p>
-</blockquote>
-<p>For example, in constructing a trend model, a researcher is making the claim that some characteristic of the change in price over some period in the past is indicative of a likely future continuation of that move. There are several parameters one could imagine being relevant to such a model. For example,</p>
-<ul>
-<li>What is the historical period over which the price change is computed? </li>
-<li>If there is a minimum size for such a move to be considered significant, what is that minimum size? </li>
-</ul>
-<p>Quants can fix parameters in a few ways. One is to set them discretionarily, based on a prior conviction about how the markets function. The results of a backtest will then indicate how much promise the strategy has. A second approach to parameter fitting is to have a part of the backtest show the results of the strategy historically over a variety of parameter values, and to select the parameters that optimize the <em>goodness</em> of the result. This decision can be subjective or it can be done by an algorithm that reflects some rule-based approach to parameter selection.  One final note on parameter fitting is that parameters can either be fit once, or they can be fit repeatedly in the future, as new data are generated in the market. <font color="#0099ff" size="3" face="黑体"> However, the act of repeatedly fitting parameters itself increases the complexity of a model. And depending on exactly how such a re-fitting is implemented, this approach may also rely on fewer data than are desirable for an exercise so fraught with overfitting peril already.</font></p>
-<blockquote>
-<p>Capital markets generate an enormous amount of data. However, the data are extremely noisy</p>
-</blockquote>
-<p>For example, tick-size data. Past data yield extremely little information about future fluctuations. There is just very little signal buried in all that noise.  Something which, therefore, closely explains such a noisy process must be viewed with an extreme amount of skepticism. </p>
-<p><font color="#0099ff" size="4" face="黑体">Out-of-Sample Testing</font><br>The model’s parameters have by now been fixed using a different set of data (from the in-sample testing period), and it’s simply a question of whether the model, with whatever parameters are chosen, really works in a new, out-of-sample data set. </p>
-<p><strong>Statistics</strong></p>
-<blockquote>
-<p>Ratio of the R-square in the out-of-sample test to R-square in the in-sample test</p>
-</blockquote>
-<p>If the out-of-sample R-square is relatively close to the in-sample one, that is considered a good thing. If it is significantly smaller, the researcher must be suspicious about the prospects for his model’s success.  There are many approaches to out-of-sample testing. For example, the <em>rolling out-of-sample</em> technique in which the single oldest data point is discarded and one new data point is added to both the fitting (in-sample) and testing (out-of-sample) period. All the data that were set aside from the in-sample test are used in the out-of-sample test. The rolling out-of-sample technique is thought to help refresh the model over time so that it does not depend on a single set of tests that might have been run some years previously. However, depending on the circumstances, this approach can have the weakness of giving the model the benefit of constant knowledge of the recent past, which could reduce its robustness. Still another approach utilizes an ever-growing window of data for ongoing out-of-sample testing as time passes and more data are collected.   Though the objective of out-of-sample testing is clearly valid, it turns out to be a rather tricky thing to do correctly. <strong>Risk</strong>: regime switch + look-ahead bias (going back and forth between the in- and out-of-sample data). For example, the Internet bubble of the late 1990s.  Another appoach is to determine that out-of-sample testing is a bit of a myth in the first place, especially for any experienced, observant researcher.  As a result, out-of-sample testing is <font color="#0099ff" size="3" face="黑体">foregone in favor of a combination of extra vigilance regarding the in-sample results, coupled with a minimum of parameter fitting.</font>  In this methodology, the quant uses as few parameters as possible, sets the values at some reasonable level, and simply tests the strategy and looks for all those metrics of good performance to have sufficiently high readings. </p>
-<p><font color="#0099ff" size="4" face="黑体">Assumptions of Testing</font>  </p>
-<blockquote>
-<p>Transaction costs -&gt; frequency<br>Short availability</p>
-</blockquote>
-
           
+Everything should be made as simple as possible, but not simpler — Albert Einstein 
+
+A characteristic shared among well-behaved quants is their adher
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/blog/2019/06/30/research/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -556,87 +656,16 @@
       
         
           
-            <blockquote>
-<p>Quality is never an accident; it is always the result of high intention, sincere effort, intelligent direction and skillful execution — William A.Foster </p>
-</blockquote>
-<h2 id="Transaction-Cost-Models"><a href="#Transaction-Cost-Models" class="headerlink" title="Transaction Cost Models"></a>Transaction Cost Models</h2><p>The idea behind transaction cost models is that it costs money to trade. In the world of quant trading, there are only two reasons to make a trade: i) It improves the odds or magnitude of making money; ii) It reduces the odds or magnitude of losing money.  The transaction cost models are not designed to minimize the cost of trading, only to inform the portfolio construction engine of the costs of making any given trade. The part of the black box that minimizes costs is the execution algorithm. Transaction costs have three major components: </p>
-<blockquote>
-<p>Commissions and Fees<br>Slippage<br>Market Impact </p>
-</blockquote>
-<p><strong>Commissions and Fees</strong> Commissions are not the only costs charged by brokerage and exchanges. Brokers charge fees (which are usually a component of the commissions) for services known as <em>clearning</em> and <em>settlement</em>. Clearing involves regulatory reporting and monitoring, tax handling, and handling failure, all of which are activities that must take place in advance of settlement.  Settlement is the delivery of securities in exchange for payment in full, which is the final step in the life of a trading transaction and fulfills the obligations of both parties involved in the transaction. </p>
-<p><strong>Slippage</strong> Slippage is the change in the price between the time a trader (or quant system) decides to transact and the time when the order is actually at the exchange for execution. The market is constantly moving, but a trading decision is made as of a specific point in time. As time passes between the decision being made and the trade being executed, the instrument being forecast is likely to be moving away from the price at which it was quoted when the forecast was made. In fact, the more accurate the forecast, the more likely it is that the price of the instrument is actually going toward the expected price as more time passes. But the instrument makes this move without the trader benefiting, because he has not yet gotten his trade to market. </p>
-<blockquote>
-<p>Strategies that tend to suffer most from slippage are those that pursue trend-following strategies, because they are seeking to buy and sell instruments that are already moving in the desired direction. Strategies that tend to suffer least from slippage, and for which slippage can sometimes be a positive, are those that are mean reverting in orientation, because these strategies are usually trying to buy and sell instruments that are moving against them when the order is placed. </p>
-</blockquote>
-<p>Slippage is a function of time, which depends on the trader’s latency or speed to market, the prevailing trend and the volatility of the instrument being forecast. Slippage is not a major factor for instuments with low-volatility, however, it can be a major issue for the ones with high-volatility. </p>
-<p><strong>Market Impact</strong> Market impact is a measurement of how much a given order moves the market by its demand for liquidity.  Market impact is normally defined as the difference between the price at the time a market order enters the exchange and the price at which the trade is actually executed. Factors that affect market impact include </p>
-<ul>
-<li>Size of the order relative to the liquidity present at the time</li>
-<li>Imbalance between supply and demand for the instrument being executed </li>
-<li>The number of order trades that are being made in the same direction at the same time</li>
-<li>Whether news in the stock is causing impact to behave differently from normal</li>
-</ul>
-<p>Questions like <em>Did a quant trader’s sell order slow the rise of the prevailing trend somewhat, and if so, by how much?</em> need to be answered when building transaction cost models. </p>
-<h3 id="Types-of-Transaction-Cost-Models"><a href="#Types-of-Transaction-Cost-Models" class="headerlink" title="Types of Transaction Cost Models"></a>Types of Transaction Cost Models</h3><p>There are four basic types of transaction cost models:</p>
-<blockquote>
-<p>flat<br>linear<br>piecewise-linear<br>quadratic </p>
-</blockquote>
-<p>Regardless of the type of model used, the quant must describe the cost of trading each instrument in her universe. After all, a less liquid small cap stock is likely to be more expensive to trade than a more liquid mega cap stock, and that must be a factor in deciding how much of each to trade. Furthermore, the quant should refresh empirical estimations of transaction costs both to keep the model current with the prevailing market conditions as well as to indicate when more research is required to improve the model itself. </p>
-<h2 id="Execution"><a href="#Execution" class="headerlink" title="Execution"></a>Execution</h2><p>There are two basic ways to execute a trade: either electronically or through a human intermediary (e.g., a broker). Electronic execution is accomplished through <em>direct market access</em> (DMA), which allows traders to utilize the infrastructure and exchange connectivity of their brokerage firms to trade directly on electronic markets such as <em>electronic communication networks</em> (ECNs).  Traders could call their brokers to work their orders—pick the best times, sizes, and prices, or occasionally contacting other counterparties to negotiate a better price on a large block trade, or acquire execution algorithms to work on them. Execution algorithms contain the logic used to get an order completed, including instructions about how to slice up an order into smaller pieces (to minimize market impact), or how to respond to various kinds of changes in the limit order book and price behavior. One can acquire execution algorithms in one of the three ways: built them, use the broker’s, or use a third-party software vendor’s. </p>
-<h3 id="Order-Execution-Algorithms"><a href="#Order-Execution-Algorithms" class="headerlink" title="Order Execution Algorithms"></a>Order Execution Algorithms</h3><p>Order execution algorithms determine the way in which systematic execution of a portfolio is actually done. The principle goal of execution algorithms, and the function of most execution desks in general, is to get the desired amount of a trade done as completely as possible and as cheaply as possible.  Cheapness has several facets, including market impact and slippage. One driver of both impact and slippage is what is known as a footprint, which refers to a detectable pattern of behavior by a market participant. If an order execution algorithm leaves an obvious footprint, its activities become predictable to other market participants, and these other participants may well react in such a way as to increase the market impact and slippage incurred by such an algorithm.   </p>
-<blockquote>
-<p>Benchmark: VWAP<br><strong>VWAP</strong>: The most standard benchmark for judging the quality of an execution algorithm over multiple trades.<br><strong>Idea</strong>:  VWAP may give a fair sense of how  the day’s volumes were priced.<br><strong>Trouble</strong>: Some investors may be fooled by looking at VWAP. If a buyer of stock executes huge volumes during some days, his volumes will most likely increase the price of that stock, and the VWAP. As such, his own activities impact the benchmark against which his execution algorithm is measured,  making the interpretation of this benchmark tricky. </p>
-</blockquote>
-<p>The major considerations that go into the making of an order working algorithm are as follows: </p>
-<blockquote>
-<p>Whether to be aggressive or passive<br>What type of order to utilize<br>How to determine the ideal order size<br>Where to sent it</p>
-</blockquote>
-<p><strong>Aggressive versus Passive</strong>  The level of aggressiveness is usually a function of the type of strategy being employed and depends on the strength of the signal, the system’s confidence in that signal, and sometimes also on considerations from the order book, such as order imbalance. </p>
-<blockquote>
-<p><strong>Strategies</strong><br>It is generally ture that alpha strategies that are based on a concept of momentum will be paired with execution strategies that are more aggressive, because the market can tend to run away from the trader if he is not aggressive. It is also generally the case that mean reversion strategies utilize more passive execution strategies because they are taking the risk that the prevailing trend persists, and at least by executing at a better price, this mitigates the downside risk of standing in front of the steamroller. </p>
-</blockquote>
-<blockquote>
-<p><strong>Signal</strong><br>If you had inside information that a stock was going to double in the next day because some other company was set to announce an acquisition of the stock in question at a large premium, and if trading on inside information was legal (which of couse is not), you should be perfectly happy to pay a lot of money to the marketplace to fill a large order to buy this stock. It would be illogical to fret over a few pennies per share when many dollars are the upside. On the other hand, if you have no view on a stock but were being asked what you’d be willing to pay for it by someone who wants to sell it, you are likely to offer a low enough price that there is some margin of safety. </p>
-</blockquote>
-<p><strong>Order Types</strong> </p>
-<blockquote>
-<p><strong>Hidden order</strong>: 
-Hidden orders are a way to mask one’s limit orders from the market, at the cost of losing priority versus visible orders at the same price. Placing a hidden order provides no information to the market, which helps reduce the market’s perception of imbalances. One algorithmic trading technique that utilizes hidden orders is known as iceberging. </p>
-</blockquote>
-<blockquote>
-<p><strong>Market-on-Close order</strong><br>Release the order as a market order during the closing auction for that day.</p>
-</blockquote>
-<blockquote>
-<p><strong>Stop limit order</strong><br>Enter a limit order at a predetermined price, but to wait until the instrument trades at that price before entering the order.</p>
-</blockquote>
-<blockquote>
-<p><strong>Good-till-canceled order</strong><br>A limit order that is not automatically canceled at the end of the day but remains in effect for days or weeks, until explicitly canceled by the trader. </p>
-</blockquote>
-<p> <strong>Large Order versus Small Order</strong> How much of a total order to send at once? By spreading the order out over time, the trader runs the risk that the price may move more while the order is being spreading out than it would have if it had been executed right away, even with the extra cost of market impact.  Generally, however, it is agreed that spreading out trades is a useful way to reduce the cost if transacting, and this is an extremely common feature in execution algorithms. </p>
-<blockquote>
-<p>The determination of the size of each order is related to the analysis of the correct level of aggressiveness. Again, a highly attractive trade warrants taking on more of it quickly than a trade that is relatively less appealing. But if not, this much aggressiveness in the order placement might not be necessary, and the transaction can be executed in a different manner. For example, a trader might find that taking whatever liquidity is available at the best offer and then waiting for others to step in and offer the same price a moment later could allow the same volume of shares to be acquired at whatever the best offer was at the time that  the first piece of the order was executed, rather than a worse average price achieved by sweeoing through multiple levels of the order book. </p>
-</blockquote>
-<p> <strong>Where to Send an Order</strong> In some markets, there are several pools of liquidity for the same instruments. There is a whole field of work in the area of <em>smart order routing</em>, which involves determining to which pool of liquidity it is best to send a given order at the current moment.   </p>
-<h3 id="Dark-Pools"><a href="#Dark-Pools" class="headerlink" title="Dark Pools"></a>Dark Pools</h3><p> Exchanges can be categorized as being <em>lit</em> and <em>dark</em>. Lit exchanges show market participants the prices and sizes of bids and offers available in the limit order book. Dark exchanges provide no such information. The most relevant feature of a dark pool is that it facilitates the execution of large orders, because orders placed on a dark pool are note revealed.  Dark pools are created by brokers or independent firms to allow <strong>their customers</strong> to trade directly with each other in an anonymous way.  </p>
-<blockquote>
-<p>One a dark pool, there is no information provided about the limti order book, which contains all the liquidity being provided by market makers and other participants. Customers are simply posting their orders to the pool and if someone happens to want to do the opposite side of those orders, the orders get filled. As a result of this anonymous process of matching orders, the market is less likely to move as much as it would in a more public venue, where automated market making practitioners require compensation to take the other side of large orders. </p>
-</blockquote>
-<p> One fact that makes dark pool transactions somewhat unusual is that they are over-the-counter, off-exchange transactions in instruments that are exchanged traded. Dark pools could not exist without the public markets, because the securities traded on dark pools are listed on public exchanges. Furthermore, the public markets provide the only transparent sense of price discovery, without which dark pool participants would have a significantly harder time determining what prices to bid and offer.  Partly because of these issues, coupled with the fact dark pools are available only to selected customers, controversy surrounds dark pools. </p>
-<h2 id="Trading-Infrastructure"><a href="#Trading-Infrastructure" class="headerlink" title="Trading Infrastructure"></a>Trading Infrastructure</h2><p> To execute and process electronic trades, connectivity needs to be set up between the trader and the exchange. Furthermore, a protocol for messages between these two parties is required. The handware and software quants utilize in implementing their trading strategies are the final pieces of infrastructure.  As in most things, quants face a choice between building or buying infrastructure in all three of these areas.  Due to regulatory and other constraints, most traders utilize the services of independent brokerage firms that act as the trading agents for their strategies. One of the benefits of using a broker is that infrastructure requirements are handled by that broker, and this infrastructure can be costly to replicate. </p>
-<blockquote>
-<p><strong>DMA</strong>: causes between 10 and 30 milliseconds of delay between the time the order is sent from the quant’s server and the time the order reaches the exchange.</p>
-</blockquote>
-<blockquote>
-<p><strong>Colocation</strong>: have an order travel from the quant’s server to the exchange in a fraction of a millisecond. </p>
-</blockquote>
-<blockquote>
-<p> <strong>Financial Information sEchange (FIX)</strong>: a standardized way for various participants in the trading process to communicate information. </p>
-</blockquote>
-<blockquote>
-<p><strong>Hardware &amp; Software</strong>: attempt to make their algorithms, databases, and execution software leaner, to reduce the internal latency of processing market data and sending an order out to the market. </p>
-</blockquote>
-
           
+Quality is never an accident; it is always the result of high intention, sincere effort, intelligent direction and skillful execution — William A.Fos
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/blog/2019/06/27/execution-and-transaction-cost-models/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -782,61 +811,18 @@ Hidden orders are a way to mask one’s limit orders from the market, at the cos
       
         
           
-            <blockquote>
-<p>No sensible decision can be made any longer without taking into account not only the world as it is, but the world as it will be — Isaac Asimov</p>
-</blockquote>
-<p>Quantitative portfolio construction models come in two major forms. The first family is rule based. The second family is optimized.  Rule-based portfolio construction models are based on heuristics defined by the quant trader and can be exceedingly simple or rather complex. The heuristics that are used are generally rules that are derived from human experience, such as by trial and error. Optimizers utilize algorithms - step-by-step sets of rules designed to get the user from a starting point to a desired ending point - to seek the best way to reach a goal that the quant defines. This goal is known as an <em>objective function</em>, and canonical example of an objective function for an optimizer is to seek the portfolio that generates the highest possible return for a unit of risk. </p>
-<h2 id="Rule-Based-Portfolio-Construction-Models"><a href="#Rule-Based-Portfolio-Construction-Models" class="headerlink" title="Rule-Based Portfolio Construction Models"></a>Rule-Based Portfolio Construction Models</h2><p>There are four common types of rule-based portfolio construction models:</p>
-<blockquote>
-<p>equal position weighting<br>equal risk weighting<br>alpha-driven weighting<br>decision-tree weighting </p>
-</blockquote>
-<p><strong>Equal Position Weighting</strong>  The strength of a signal related to a given instrument is ignored except insofar as the signal is strong enough to be worthy of a position at all. Different from equal position weighting, unequal weighting assumes implicitly that there is sufficient statistical strength and power to predict not only the direction of a position in the future but also the magnitude and/or probability of its move relative to the other forecasts in the portfolio. Quants utilizing equal-weighting schemes believe that  the alpha model is only to be trusted enough to forecast direction, and as long as there is sufficient confidence in a forecast of direction that is sufficiently large to justify trading the instrument at all, it is worth trading at the same size as any other position. Meanwhile, unequal weighting leads to a willingness to take a few large bets on the best forecasts and many smaller bets on the less dramatic forecasts. This weighting disparity may lead to the strategy taking excess risk of some idiosyncratic event in a seemingly attractive position. This can be the case regardless of the type of alpha used to make a forecast. </p>
-<blockquote>
-<p>In momentum-oriented strategies, many of the strongest signals are those for which the underlying instrument has already moved the most. In other words, it might be too late, and the trader risks getting his strongest signals at the peak of the trend, just as it reverses. Similarly, for mean reversion-oriented strategies, many of the largest signals are also for those instruments that have already moved the most and are now expected to snap back aggressively. But frequently, large moves happen because there is real information in the marketplace that leads to a prolonged or extended trend. This phenomenon is known to statisticians as adverse selection bias.</p>
-</blockquote>
-<p>There are occasions in which bad data points end up filtering into a trading strategy. Equal weighting positions, in particular if there are many of them, ensure that the risk of loss associated with the large forecasts that could result from significantly wrong data does not get out of hand. </p>
-<p><strong>Equal Risk Weighting</strong> Equal risk weighting adjusts position sizes inversely to their volatilities (or whatevr other measure of risk, such as drawdown, is preferred). The rationale is straightforward. A small-cap stock with a significant amount of price volatility might not deserve quite the same allocation as a mega cap stock with substantially less volatility. Putting an equal number of dollars into these two positions might in fact be taking a much larger and inadvertent real bet on the small cap stock. This is because the small cap stock is much more volatile, and therefore every dollar allocated to that stock would move the portfolio more than the same dollars allocated to the larger cap position. As such, some quants who believe that equal weighting is the most appropriate method will utilize an equal risk-weighting approach in an effort to improve the true diversification achieved. However, the equal risk-weighting approach also has its shortcomings: volatility is  a backward-looking measurement, lower-volatility instruments might suddenly become volatile. </p>
-<p><strong>Alpha-Driven Weighting</strong> The idea behind alpha-driven weighting position is that the alpha model dictates how attractive a position is likely to be, and this signal is the best way to size the position correctly. Still, most quants who utilize this approach would not allow the size of the largest position to be unlimited. As such, they would use the risk model to provide a maximum size limit for a single position. Given the limit, the strength of the signal determines how close to the maximum the position can actually be. The types of constraints used with this approach to portfolio construction can also include limits on the size of the total bet on a group (e.g., sector or asset class). There still needs to be a function that relates the magnitude of the forecast to the size of the position, but these functions can be straightforward, and in general, the bigger the forecast, the larger the position. </p>
-<blockquote>
-<p>Alpha weighting is favored by some quants because it emphasizes making money, which is after all the goal of the whole exercise. However, some quant strategies, such as futures trend following, that utilize this method can suffer sharp drawdowns relatively frequently. This is because these models usually have the largest signals when a price trend is already well established. As the trend proceeds, the size of the position grows, but this will often leave the trader with his largest position just when the trend reverses. </p>
-</blockquote>
-<p>Caution is therefore advisable when utilizing an alpha-driven portfolio construction algorithm, because such an approach causes a heavy reliance on the alpha model being right — not only about its forecast of the direction of an instrument but also about the size of the move the instrument will make. </p>
-<p><strong>Decision-tree weighting</strong> Decision-tree approaches  look at a defined set of rules in a particular order to determine position sizing. </p>
-<h2 id="Portfolio-Optimizers"><a href="#Portfolio-Optimizers" class="headerlink" title="Portfolio Optimizers"></a>Portfolio Optimizers</h2><p>Portfolio optimizers are based on the principles of <em>modern portfolio theory</em> (MPT): investors are inherently risk averse. If two assets offer the same return but different levels of risk, investors will prefer the less risky asset. The objective function that many quants use is the same as the original: maximizing the return of a portfolio relative to the volatility of the portfolio’s returns. However, an infinite array of objective functions can be used. For example, one could specify an objective function that will cause the optimizer to maximize portfolio return relative to peak-to-valley drawdown instead of return volatility. The use of return versus risk is itself entirely optional, and one could very easily optimize an objective function focused entirely on the total expected return of a portfolio. </p>
-<h3 id="Inputs-to-optimization"><a href="#Inputs-to-optimization" class="headerlink" title="Inputs to optimization"></a>Inputs to optimization</h3><p>The inputs required for an optimizer, as already mentioned, are </p>
-<blockquote>
-<p>expected returns<br>expected volatility<br>expected correlation </p>
-</blockquote>
-<p>of the various instruments to be considered for the portfolio. It is worth understanding where practitioners get the estimates and expectations used in optimization, since they are critical to the model itself. </p>
-<p><strong>Expected Return</strong>  In more traditional finance, such as private wealth management, expected returns are usually set to equal very long-term historical returns because usually the goal is to create a strategic asset allocation that won’t need to be dynamically readjusted. <strong>By contrast, quants tend to use their alpha models to drive expected return.</strong> The output of the alpha model typically includes an expected return and/or an expected direction, or some other output that indicates the attractiveness of each potential portfolio holding (e.g., a score). </p>
-<blockquote>
-<p>Forecasts of direction can be used as forecasts of return simply by making all positive forecasts equal and all negative forecasts equal (often subject to minimum threshold parameters, so that at least the return forecasts have to be of some significant size before making a bet). In this kind of optimization, it is not important to have a precise forecast of return, but rather a forecast of the attractiveness of each potential position in terms of the expected return. So directional forecasts are indifferent between the expected return of each position, and the only relevant feature of the forecast is its sign. </p>
-</blockquote>
-<p><strong>Expected Volatility</strong> Many practitioners, whether in traditional finance or in quant trading, tend to use historical measures for volatility. Some, however, develop and use their own forecasts of volatility.  The most common approaches to forecasting volatility utilize stochastic volatility models. The basic idea behind the stochastic family of volatility forecasting methods is that volatility goes through phases in which it is at high levels, followed by periods in which it is at low levels (i.e., the somewhat predictable phases of the volatility cycle), with occasional jumps (the somewhat random and unpredictable part). The most widely used such technique is called Generalized Autoregressive Conditional Heteroskedasticity (GARCH). Indeed, there exist many other approaches to forecasting volatility, and they can be understood in much the same way that we evaluated strategies for forecasting price. </p>
-<p><strong>Expected Correlation</strong>  Correlation is at heart a measure of the similarity of the movements of two instruments, expressed in a number between -1 and +1. An interesting fact about correlation is that it says nothing about the trend in the instruments over time. </p>
-<blockquote>
-<p>Imagine two companies in the same industry group, such as airline companies. If the first company is simply outcompeting the other and winning market share, the first will ikely have a positive trendline, while the second may well have a negative trendline (assuming the overall market is roughly flat). Nevertheless, these two companies will likely have a high positive correlation, because their  returns are still driven heavily by the overall market, by their sector, and by their industry, not to mention the more specific market factors associated with being an airline company (e.g., the price of oil). </p>
-</blockquote>
-<p>There are a number of problems with using standard correlation measures in quant trading. For example, the measurement of the relationships between two instruments can be very unstable over time. They can even be unreliable over long time periods. The main source of this instability is that the relationships between financial instruments are often governed by a variety of dynamic forces. For example, if the stock market is experiencing a significant downdraft, it is probable that the correlation between A and B will be temporarily higher than usual. If, on the other hand, there is uncertainty about oil supply, this may affect A but not B, and correlation may be reduced temporarily. If either company has significant news, this can cause decoupling as well. </p>
-<h3 id="Optimization-Techniques"><a href="#Optimization-Techniques" class="headerlink" title="Optimization Techniques"></a>Optimization Techniques</h3><p>There are many types of optimizers, ranging from basic copies of Markowitz’s original specification in 1952 to sophisticated machine learning techniques: </p>
-<blockquote>
-<p>Unconstrained Optimization<br>Constrained Optimization<br>Black-Litterman Optimization<br>Grinold and Kahn’s Approach: Optimizing Factor Portfolios<br>Resampled Efficiency<br>Data-Mining Approaches to Optimization</p>
-</blockquote>
-<p><strong>Black-Litterman Optimization</strong> Fischer Black, of Black-Scholes fame, and Bob Litterman, of Goldman Sachs, in 1990 produced a new optimization method that was first introduced in an internal memo at Goldman but was later published in 1992 in the <em>Financial Analysts Journal</em>. The <em>Black-Litterman optimizer</em> addresses some of the problems associated with errors in the measurement of inputs to an optimizer. Most important, they proposed a method of blending an investor’s expectations with a degree of confidence about those expectations, and these with the historical precedent evident in the data. </p>
-<blockquote>
-<p> Imagine that A and B correlate at 0.7 historically, but going forward, a trader’s alpha model forecasts that A will rally while B will fall. In this case, the correlation between A and B over the period being forecast may be quite low, perhaps even negative, despite the evidence from history. </p>
-</blockquote>
-<p>Black-Litterman provided a way to adjust historically observed correlation levels by utilizing the investor’s forecasts of return for the various instruments in questions. Furthermore, to the extent that the investor has greater confidence in some forecasts and less in others, this fact can be incorporated. If the investor forecast significant divergence between instruments that historically have correlated at a high level but has a low level of confidence in the forecast, something much closer to the historical level of correlation is used. To the extent that the investor has greater confidence, the forecast returns play a more important role in determining the correlation coefficient utilized by the Black-Litterman optimizer. Some quants prefer this method of optimization because it allows for a more holistic approach to combining the alpha model with the other inputs to optimization. </p>
-<p><strong>Grinold and Kahn’s Approach: Optimizing Factor Portfolios</strong> This kind of portfolio optimization technique is directly aimed at building a portfolio of signals. The idea of this approach is to build <em>factor portfolios</em>, each of which is usually rule-based (in fact, very often equal-weighted or equal risk-weighted) portfolios based on a single type of alpha forecast.</p>
-<blockquote>
-<p>One could imagine building a momentum portfolio, a value portfolio, and a growth portfolio.</p>
-</blockquote>
-<p>Each of these portfolios is in turn simulated historically, as though it were making stock picks through the past. In this way, a time series of the returns of these simulated factor portfolios is generated. These simulated factor portfolio returns are then treated as the instruments of a portfolio by the optimizer. What is therefore being optimized is not a portfolio of thousands of instruments but rather the mixing of a handful of factor portfolios.  Given the weight of each model, we can  ultimately obtain  the weight of each position. </p>
-<p><strong>Resampled Efficiency</strong> Intend to produce more robust predictions than are possible from simply using only the actual sequence of returns the instrument exhibited using a technique called <em>Monte Carlo simulation</em>. A Monte Carlo simulation reorders the actually observed results many times, thereby creating a large number of time series all based on the same underlying observations. Interesting, the average return and the volatility of returns will remain the same across all these alternate histories because they are based on the same underlying return distribution. A word of warning regarding such resampling techniques is: Re-using a historical distribution is only really useful is you have sufficient confidence that the sample in the historical distribution is a fair representation of the whole population. </p>
-<p><strong>Data-Mining Approaches to Optimization</strong> Do the same thing with mean variance optimization: searching many possible portfolios and attempting to find the ones that exhibite the best characteristics, as specified by the objective function of the optimizer. </p>
-<h3 id="Output-of-Portfolio-Construction-Models"><a href="#Output-of-Portfolio-Construction-Models" class="headerlink" title="Output of Portfolio Construction Models"></a>Output of Portfolio Construction Models</h3><p> Regardless of the type of portfolio construction approach used, the output of the quantitative portfolio construction model is a targeted portfolio: the desirable individual positions and the targeted sizes of each. This target portfolio is compared to the current portfolio, and the differences are the trades that need to be done. In the case that a brand-new portfolio is being built from scratch, all the positions recommented by the portfolio construction model will need to be executed. If, instead, the quant is rerunning the portfolio construction model as he would do periodically in the normal course of business, he would need to do only the incremental trades that close the gap between the newly recommended portfolio and the existing portfolio he holds. </p>
-
           
+No sensible decision can be made any longer without taking into account not only the world as it is, but the world as it will be — Isaac Asimov
+
+Quan
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/blog/2019/06/26/portfolio-construction-models/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -982,378 +968,18 @@ Hidden orders are a way to mask one’s limit orders from the market, at the cos
       
         
           
-            <blockquote>
-<p>The market can remain irrational longer than you can remain solvent — John Maynard Keynes </p>
-</blockquote>
-<p>Risk management should not be thought of solely as the avoidance of risk or reduction of loss. It is about the intentional selection and sizing of exposures to improve the quality and consistency of returns.   </p>
-<blockquote>
-<p>Relative alpha strategy: value/yield<br><strong>Risk</strong>: Cheap (Higher-yield) stocks underperform expensive (lower-yield) stocks.</p>
-</blockquote>
-<p>The risk is inherent to the pursuit of a value strategy, even if the quant has reason to believe that value strategies should make money in the long term. However, <strong>a value strategy without further specification can end up taking significant sector bets in addition to the intentional bet on value. But there is no evidence that there exists a long-term benefit of overweighting one industry or sector versus another.</strong> More important, assume that the stratey has neither the intention nor the capability to forecast the performance of various sectors. Therefore, sector exposure would be considered a form of risk in our framework, because sector performance is not being intentionally forecast, but having net exposure to various sectors can alter the strategy’s results day to day. <strong>So the key to understanding risk exposures as they related to quant trading strategies is that risk exposures are those that are not intentionally sought out by the nature of whatever forecast the quant is making in the alpha model</strong>.    If alpha models are like optimists, risk models are like pessimists. Risk models exist largely to control the size of desirable exposures or to deal with undesirable types of exposures. Their job is to raise hell about things that can cause losses or uncertainty, particularly those bets that are unintentionally made or are incidental byproducts of the alpha model. Risk models both highlight and attempt to remove undersirable exposures from a portfolio. </p>
-<blockquote>
-<p>There are, however, only a few things you can do with a given type of exposure, aside from simply accepting it outright. Mostly you can limit its size or eliminate it altogether. The function of risk management in the investment process is to determine which of these courses of action is most prudent for each kind of exposure and to provide that input to the portfolio construction model. </p>
-</blockquote>
-<h2 id="Limiting-the-Amount-of-Risk"><a href="#Limiting-the-Amount-of-Risk" class="headerlink" title="Limiting the Amount of Risk"></a>Limiting the Amount of Risk</h2><blockquote>
-<p>How risk is measured? </p>
-</blockquote>
-<p>There are two generally accepted ways of measuring the amount of risk in the marketplace: <em>volatility</em> and <em>dispersion</em>.  Volatility is longitudinal and measures risk by computing the standard deviation of the returns of various instruments over time, which is a way of getting at the concept of uncertainty. Dispersion measures the level of similarity in the behavior of the various instruments within a given investment universe. This is frequently calculated by taking the <strong>cross-sectional</strong> standard deviation of all the relevant instruments for a given period. The larger the standard deviation, the more varied the underlying instruments are behaving. This means that the market is less risky because the portfolio can be made of a larger number of diversified bets. Dispersion can also be measured by the correlation or covariance among the instruments in a given universe. There are many other approaches to measuring risk as well: credit spreads or credit default swaps, or the use of implied volatilities. </p>
-<blockquote>
-<p>The manner in which size is limited. </p>
-</blockquote>
-<p>Size-limiting models can be used to govern many kinds of exposures. One can limit the size of single positions and/or groups of positions, such as sectors or asset classes. Alternatively, one can limit the size of exposure to various types of risks. For example, in equity trading, one can limit the exposure of a model to market bets or to market capitalization bets. <strong>In general, risks that are subjected to limits or penalties are those that are not being forecast explicitly by the alpha model.</strong>  Another component of a risk model may be to govern the amount of <strong>overall portfolio leverage</strong>. The most common tool used for this purpose is known as a <em>value at risk</em> (VaR) model.  The way that this model controls risk in the face of rising volatility is to reduce leverage.  One issue bears mentioning is that volatility isn’t a constant over time. If a quant is goof at forecasting volatility or dispersion, there are far more interesting and productive ways to utilize these forecasts (for example, in the options markets) than there are in a risk model that governs leverage. A more theoretically sound approach, though substantially harder to implement practically, seeks to increase leverage when the strategy has better odds of winning and to decrease risk when the strategy has worse odds. The trick is to know when the odds are on one’s side. Some quants solve this problem by allowing the level of leverage to vary with the overall strength and certainty of the predictions from the alpha model, which seems to be a reasonable approach. </p>
-<blockquote>
-<p>What is having its size limited? </p>
-</blockquote>
-<p>Approaches to the size limits come in two main forms: hard constraints and penalties. The levels of limits and/or penalties can be determined in the same ways as most other things in the quant world, namely either from theory or from the data. Theory-driven approaches mostly look like an arbitrary level that is set, tested, and, if needed, adjusted until it produces an acceptable outcomes. Data-driven approaches are more varied and can include machine learning techniques to test many combinations of limits or simply testing various limit levels and letting the historical data empirically determine the final outcome. </p>
-<h2 id="Limiting-the-Types-of-Risk"><a href="#Limiting-the-Types-of-Risk" class="headerlink" title="Limiting the Types of Risk"></a>Limiting the Types of Risk</h2><p>Revisiting an earlier  relative alpha strategy, the quant might not believe he has a valid way to forecast the returns of the sectors to which these equities belong. In this case, the quant may design his bet structures so that he is making forecasts of stocks’ returns <em>relative</em> to their sector’s returns, which means that he never has a bet on the direction of the sector itself (since there should be no expectation of being compensated sufficiently for accepting them), only on which stocks will outperform and which stocks will underperform the sector.  This, in turn, helps him eliminate sector bets, which is clearly a risk management exercise as much as it is alpha generation. As such, it is theoretically possible to incorporate all the needed components of his risk model fully into his alpha model by specifying the alpha model such that it <strong>only forecasts exactly the exposures from which it expects to make money and structures its bets to avoid exposure to nonforecasted factors</strong>. </p>
-<blockquote>
-<p>Theory-Driven Risk Models</p>
-</blockquote>
-<p>Theory-driven risk modeling typically focuses on named or <em>systematic</em> risk factors. Just as in the case of theory-driven alpha models, systematic risks that are derived from theory are those for which the quant can make a reasonable, economic argument. Theory-driven risk modeling uses a set of <strong>predefined systematic risks</strong>, which enables the quant to measure and calibrate a given portfolio’s exposures (systematic risks are those that cannot be diversified away: market, sector, market capitalization, et.al). </p>
-<blockquote>
-<p>Empirical Risk Models </p>
-</blockquote>
-<p>Empirical risk models are based on the same premise as theory-driven models, namely that systematic risks should be measured and mitigated. However, the empirical approach <strong>uses historical data to determine what these risks are and how exposed a given portfolio is to them</strong>. Using statistical techniques such as <strong>principal component analysis (PCA)</strong>, a quant is able to use historical data to discern systematic risk factors.  These statistical risk models are most commonly found among statistical arbitrage traders, who are betting on exactly that component of an individual stock’s returns that is not explained by systematic risks.  </p>
-<blockquote>
-<p>It is important to note that such statistical methods may discover entirely new systematic risk factors, which a reasonable observer might be inclined to acknowledge exist but for which names have not been assigned. On the other hand, statistical risk models are subject to being fooled by the data into finding a risk factor that will not persist for any useful amount of time into the future. It is also possible for a statistical risk model to find spurious exposures, which are just coincidences and not indicative of any real risk in the marketplace. </p>
-</blockquote>
-<p>Quants are attracted to theory-driven risk models because the risk factors they encapsulate make sense. Quants that choose empirical risk models typically seek the benefits of adaptiveness. Theoretical risk models are relatively rigid, meaning that the risk factors are not altered often (otherwise the thoery would not have been very strong in the first place). Yet the factors that drive markets do change over time. As markets evolve, the data that the markets produce reflect this evolution, and these data drive empirical risk models. For these reasons, an empirical model may be more adaptive to ever-changing market conditions by detecting through new data whatever factors are implicitly driving markets. There are two stages to this adaptation. </p>
-<div id="flowchart-0" class="flow-chart"></div>
-
-<p>Besides exhibiting a weakness during a regime change, a basic understanding of statistics reveals another problem with empirical risk models. To achieve statistical significance and reduce the potential for measurement error in computing relationships among various instruments, empirical risk models require a rather large amount of data. But this leads to a trade-off that could squelch most of the adaptiveness benefits of empirical risk model, which would be addressed, somehow, by using intraday data.<br>It is worth noting that these two kinds of risk models are not mutually exclusive.  Managers might use their judgement and discretion to monitor market behavior and, should it become clear to them that theire is a new risk factor that is driving markets, they build a made-to-order risk factor to measure this temporary phenomenon. When they see that the new driver has faded in importance, they can remove it from the risk model, again using their judgment. </p>
-<blockquote>
-<p> If the theoretical risk models are any good at being right, an empirical model should capture these effects without having to know the names of the factors beforehand. If market risk is indeed a big driver of stock prices, an empirical model should pick this up from the data. If the data don’t bear it out, what good is the theory? Most premade risk models, e.g., BARRA, Northfield, Axioma, and Quantal, are not of the empirical variety because empirical solutions require a specifically set universe of instruments, and the analytical techniques are usually relatively easy to implement with simple price data. </p>
-</blockquote>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">s=>start: use now irrelevant historical data to determine relationships and measure risk factors
-o=>condition:  new behavior persists?
-e=>end: catch up to the newly prevailing theme driving markets
-s->o(yes)->e</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script>
           
-        
-      
-    </div>
-    
-    
-    
+The market can remain irrational longer than you can remain solvent — John Maynard Keynes 
 
-        <div>
-    
-        </div>
-
-
-    
-
-    
-
-    
-
-    
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yangqingqingkerry.github.io/blog/blog/2019/06/25/alpha/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Kerry Yang">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="MyBlog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2019/06/25/alpha/" itemprop="url">alpha</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-25T09:27:39+08:00">
-                2019-06-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Inside-the-Black-Box/" itemprop="url" rel="index">
-                    <span itemprop="name">Inside the Black Box</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p> Prediction is very difficult, especially about the future  — Niels Bohr</p>
-</blockquote>
-<p><font color="#0099ff" size="4" face="黑体">Alpha Models</font><br>The first piece of quant trading system is its <em>alpha model</em>, which is the part of the model that is looking to make money and is where much of the research process is focused.  Alpha is generally used as a way to quantify the skill of an investor or the return she delivers independently of the moves in the broader market.  By conventional defination, alpha is the portion of the investor’s return not due to the market benchmark, or, in other worlds, the value added (or lost) solely because of the manager. The portion of the return that can be attributed to market factors is then referred to as beta.  Obviously, any trader will be interested in making skill the dominant driver of the difference between her returns and the benchmark’s.  Alpha models are merely a systematic approach to adding skill (in timing the selection and/or sizing of portfolio holdings) to the investment process in order to make profits. For example, a trend-following trader’s ability to systematically identify trends that will persist into the future represents one type of skill that can generate profits.   A value trader buys a stock when it is undervalued and to sell it when it is fairly valued or overvalued. Again, this represents an effort to time the stock.  The software that a quant builds and uses to conduct this timing systematically is known as an <em>alpha model</em>, though there are many synonyms for this term: forecast, factor, alpha, model, strategy, estimator, or predictor. </p>
-<blockquote>
-<p> All successful alpha models are designed to have some edge, which allows them to anticipate the future with enough accuracy that, after allowing for being wrong at least sometimes and for the cost of trading, they can still make money. In a sense, of the various parts of a quant strategy, the alpha model is the optimist, focused on making money by predicting the future. </p>
-</blockquote>
-<p>To make money, generally some risk, or exposure, must be accepted. By utilizing a strategy, we directly run the risk of losing money when the environment for that strategy is adverse: whatever exposures they take on are rewarding if they are in favor, and are costly if they are out of favor. </p>
-<h2 id="Types-of-Alpha-Models-Theory-Driven-and-Data-Driven"><a href="#Types-of-Alpha-Models-Theory-Driven-and-Data-Driven" class="headerlink" title="Types of Alpha Models: Theory-Driven and Data-Driven"></a>Types of Alpha Models: Theory-Driven and Data-Driven</h2><p>An important and not widely understood fact is that only a small number of trading strategies exist for someone seeking alpha. But these basic strategies can be implemented in many ways, making it possible to create an incredible diversity of  strategies from a limited set of core ideas. The first key to understanding quant trading strategies is to understand the perspectives quants take on science.<br>Becasue most quants are trained first in the sciences and only later in finance, quants’ scientific backgrounds frequently determine the approach they take to trading over their entire careers. The two major branches of science are theoretical and empirical. Theoretical scientists try to make sense of the world around them by hypothesizing why it is the way it is. Empirical scientists believe that enough observations of the world can allow them to predict future patterns of behavior, even if there is no hypothesis to rationalize the behavior in an intuitive way.  In other words, knowledge comes from experience. </p>
-<blockquote>
-<p><strong>Theoretical scientists</strong>  start with observations of the markets, think of a generalized theory that could explain the observed behavior, and then rigorously test it with market data to see if the theory is shown to wither unture or supported by the outcome of the test. For example Cheap stocks outperform expensive stocks.</p>
-</blockquote>
-<blockquote>
-<p><strong>Empirical scientists</strong> believes that correctly performed empirical observation and analysis of the data can obviate the need for theory. Such a scientist’s theory, in short, is that there are recognizable patterns in the data that can be detected with careful application of the right techniques. </p>
-</blockquote>
-<p>It is worthwhile to note that theory-driven scientists are also reliant on observations to drive theories in the first place. Just like the empiricists, they, too, believe that something one can observe in the data will be repeatable in the future. Empiricists, are less sensitive to whether their human minds can synthesize a story to explain the data even is, in the process, they risk finding relationships or patterns in the data that are entirely spurious. </p>
-<h3 id="Theory-Driven-Alpha-Models"><a href="#Theory-Driven-Alpha-Models" class="headerlink" title="Theory-Driven Alpha Models"></a>Theory-Driven Alpha Models</h3><p>Theory-driven quants start with some economically feasible explanation of why the markets behave in a certain way and test these theories to see whether they can be used to predict the future with any success.  Most of what theory-driven quants do can be relatively easily fit into one of six classes of phenomena: trend, reversion, technical sentiment, value/yield, growth, and quality. These six categories can be further understood by examining the data that they use: price-related data and fundamental data. </p>
-<ul>
-<li>price-related data: trend, mean reversion, technical sentiment </li>
-<li>fundamental data: value/yield, growth/sentiment, quality </li>
-</ul>
-<p>Many successful quants utilize more than one type of alpha model in conjunction, but to gain a proper understanding of these strategies, we will first break them down individually and discuss the combination of them afterward. </p>
-<p><font color="#0099ff" size="4" face="黑体">Strategies Utilizing Price-Related Data</font><br>Quants who seek to forecast prices and to profit from such forecasts are likely to be exploiting one of two kinds of phenomena. The first is that an established trend will continue, and the second is that the trend will reverse.  A third idea will be explored as well, which we refer to as technical  sentiment. </p>
-<p><strong>Trend Following</strong>  Trend following is based on the theory that markets sometimes move for long enough in a given direction that one can identify this trend and ride it. The economic rationale for the existence of trends is based on the idea of consensus building among market participants.  Trend followers typically look for a significant  move in a given direction in an instrument. They bet that, once a significant move has occurred, it will persist because this significant move is a likely sign of a growing consensus. </p>
-<blockquote>
-<p>They prefer this significance because a great risk of trend-following strategies is whipsawing action in markets, which describes a somewhat rapid up-and-down pattern in prices. </p>
-</blockquote>
-<p>There are many ways to defining what kind of move is significant, and the most common terms used to describe this act of definition are <code>filtering</code> and <code>conditioning</code>. </p>
-<blockquote>
-<p>Example:  CTA<br><strong>Risk</strong>: The returns of this strategy are streaky and highly variable<br><strong>Reasons</strong>: The behaviors they seek to profit from in the markets are not ever-present but rather are unstable and episodic<br><strong>Idea</strong>: Make enough money in the good times and manage the downside well enough in the bad times to make the whole exercise worthwhile</p>
-</blockquote>
-<p><strong>Mean Reversion</strong>  When prices move, they move in either the same direction they’ve been going or in the opposite. The theory behind mean reversion strategies is that there exists a center of gravity around which prices fluctuate, and it is possible to identify both this center of  gravity and what fluctuation is sufficient to warrant making a trade. There are several valid rationales for existence of mean reversion: </p>
-<ol>
-<li>There are sometimes short-term imbalances among buyers and sellers due simply to liquidity requirements that lead to an instrument being over-bought or over-sold</li>
-<li>Market participants are not all aware of each other’s views and actions, and as they each place orders that drive a price toward its new equilibrium level, the price can overshoot due to excess supply or demand at any given time. </li>
-</ol>
-<p>Mean reversion traders are betting against momentum, and bear the risk of adverse selection. Interesting, trend and mean reversion strategies are not necessarily at odds with each other. Longer-term trends can occur, even as smaller oscillations around these trends occur in the shorter term.  In fact, some quants use both of these strategies in conjunction. </p>
-<blockquote>
-<p>Example: stat arb：<br><strong>Risk</strong>: Any time that the market regime changes, the relationships among instruments frequently also change, which can lead the system to mistakenly group things together, even though they no longer will behave like each other<br><strong>Idea</strong>: Relative attractiveness analysis </p>
-</blockquote>
-<p> Stat arb ushered  in an important change in worldwide, one that focused on whether Company A was over- or undervalued relative to Company B rather than whether Company A was simply cheap or expensive in itself. This important evolution would lead to the creation of many strategies based on forecasts of relative attractiveness.  Trend and mean reversion strategies represent a large portion of all quant trading. After all, price data are plentiful and always changing, presenting the quant with many opportunities to trade. <img src="./images/1.png" alt>  It may be interesting to note that trend and mean reversion, though they are theoretically opposite ideas, both seem to work. How is this possible? Largely, it’s possible because of different timeframes.   Trends tend to  occur over longer time horizons, whereas reversions tend to happen over shorter-term time horizons.  You can also find that the strategies are likely to work well in different regimes, and in some cases, mean reversion strategies can work as the longer-term indicator, while momentum can be used as a faster indicator. </p>
-<p><strong>Technical Sentiment</strong>  Sentiment stategies track investor sentiment—expressed through price, volume, and volatility behavior—as an indicator of future returns.   Unlike in the cases of momentum and mean reversion, there is no clear economic rationale that gives birth to a strategy. In other words, there are widely varying views on the value and use of sentiment information in forecasting, To some practitioners, a high degree of positive sentiment in some instrument would indicate that the instrument is already overbought and therefore ready to decline. To others, high positive sentiment would indicate that the instrument has support to move higher. For still others, sentiment is only used as a conditioning variable, for example by utilizing a trend-following strategy only if the volumes that were associated with the price movements were significant, whereas a low-volume trend might be ignored.  There are, however, several examples of technical sentiment strategies that can be thought of as standalone ways to forecast future direction. </p>
-<blockquote>
-<p><strong>Example 1</strong>: Look at the volume of puts and calls. If puts have higher volumes r.t. calls than they normally do, it might be an indicator that investors are worrried about a downturn. If puts have lower volumes versus calls than normal, it might be a bullish sentiment indicator. </p>
-</blockquote>
-<blockquote>
-<p><strong>Example 2</strong>: It is natural to see some level of difference in the implied volatilities of puts versus calls, and use it as indicative of sentiment. </p>
-</blockquote>
-<blockquote>
-<p><strong>Example 3</strong>:  At the shortest timeframes, some high-frequancy traders evaluate the shape of the limit order book to determine near-term sentiment. The shape of the order book includes factors such as the size of bids or offers aways from the mid-market relative to the size at the best bid/offer, or the aggregate size of bids versus offers. For slightly longer-term strategies, analyses of volume can include looking at the trading volume, the turnover, open interest, or other similar measures of trading activity. </p>
-</blockquote>
-<p><font color="#0099ff" size="4" face="黑体">Strategies Utilizing Fundamental  Data</font><br>Most strategies utilizing fundamental data in their alpha models can be easily classified into one of three groups: value/yield, growth, or quality. Though these ideas are frequently associated with the analysis of equities, it turns out that one can apply the exact same logic to any  kind of instrument. A bond, a currency, a commodity, an option, or a piece of real estate can be bought or sold because it offers  attractive value, growth, or quality characteristics. </p>
-<p><strong>Value/Yield</strong> There are many metrics that people use to describe value in various asset classes, but most of them end up being ratios of some fundamental factor versus the price of the instrument,  such as the  E/P ratio, also known as <em>earning yield</em>. Note that investors have long done this with dividends, hence the <em>dividend yield</em>, another commonly used measure of value. The basic concept of value strategies is that the higher the yield, the cheaper the instrument.  </p>
-<p>Most often, value is thought of as a strategy that is defined by buying cheap. The idea bahind value investing is that markets tend to overestimate the risk in risky instruments and possibly to underestimate the risk in less risky ones. Therefore, it can pay off to own the more risky asset and/or sell the less risky asset.  When we say cheap, we mean that the instrument’s price have fallen substantially. So in some sense, the value investor is being paied to take on the risk of standing in the way of momentum. </p>
-<p>Value investing is often done on a relative basis: buying the undervalued security and selling the overvalued one against it, this strategy is also known as a <code>carry trade</code> in currencies and bonds, and <code>quant long/short (QLS)</code> in equities.   QLS traders tend to rank stocks according to their attractiveness based on various factors, such as value, and then buy the higher-ranked stocks while selling short the lower-ranked ones. The presumption is that a stock with a higher value  might outperform stocks with lower ones over the holding period.   Value trading offers investors a margin of safety. In many respects, this margin of safety can be seen clearly in the concept of carry. If nothing else happens, a carry trade offers an investor a baseline rate of return, which acts as the margin of safety. </p>
-<p><strong>Growth/Sentimenst</strong> Growth strategies seek to make prediction based on the asset’s expected or historically observed level of economic growth, such as GDP growth or earnings growth. That a given stock is a growth asset implies nothing about its valuation or yield. The theory behind is that, all else being equal, it is better to buy assets that are experiencing rapid economic growth and/or to sell assets that are experiencing slow or negative growth. Some growth metrics, such as the price/earnings-to-growth (PEG) ratio, are basically a forward-looking concept of value; that is, they compare growth expectations to value expectations to see whether a given instrument is fairly pricing in the positive or negative growth that the trader believes the asset will likely experience. If you expect an asset to grow rapidly but the market has already priced the asset to account for that growth, there is no growth trade to be made. In fact, if the market has priced in a great deal more growth than you expectm it might even be reasonable to short the instrument. But certainly, many forms of growth trading are simply focused on buying rapidly growing assets regardless of price and selling assets with stagnant or negative growth, even if they are very cheap (or offer high yields) already. </p>
-<blockquote>
-<p>Growth investors try to be early in the process of identifying growth and, hence, early in capturing the implied increase in the future stature of a company. </p>
-<blockquote>
-<p><strong>Macro level</strong>: some foreign exchange trading concepts are predicated on the idea that it is good to be long currencies of countries that are experiencing relatively strong growth, because it is likely that these will have higher relative interest rates in the future than weaker-growth or recession economies, which makes this a sort of <em>forward-looking carry trade</em>. </p>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<p><strong>Sentiment-based strategy</strong>: focuses on analysts’ earnings estimate revisions (or other aspects of analyst sentiment, including price targets and recommendation levels). The thesis is identical to any other growth strategy, but the idea is to try to get an early glimpse of a company’s growth by using the analysts’ expectations rather than simply waiting for the company itself to report its official earnings results. </p>
-</blockquote>
-</blockquote>
-<p><strong>Quality</strong>  A quality investor believes that, all else being equal, it is better to own instruments that are of high quality and better to sell or be short instruments of poor quality.  The justification for this strategy is that capital safety is important. Quality signals fall into one of five categories: </p>
-<blockquote>
-<p>Leverage<br>Diversity of revenue sources<br>Management quality<br>Fraud risk<br>Sentiment regarding quality (CDS) </p>
-</blockquote>
-<p>Quality’s performance over time fluctuates greatly and is highly dependent on the market environment. In 2008, quality was a particularly successful factor in predicting the relative prices of banking stocks. In particular, some quality factors helped traders detect, avoid, and/or sell short those banks with the most leverage or the most exposure to mortgage-related businesses, thereby allowing these traders to avoid or even profit from the 2008 credit crisis. However, for all that these strategies profit when things are very dire, they tend to do poorly when the markets are preforming well, and terribly when the equity markets go into a state of euphoria. </p>
-<h3 id="Data-Driven-Alpha-Models"><a href="#Data-Driven-Alpha-Models" class="headerlink" title="Data-Driven Alpha Models"></a>Data-Driven Alpha Models</h3><p>These strategies look at current market conditions, searching the history for similar conditions, detemining the probabilities of various outcomes in the aftermath of that setup, and making trades in accordance with the probabilities.  Data mining, when done well, is based on the premises that the data tell you what is likely to happen next, based on some patterns that are recognizable using certain analytical techniques. When used as alpha models, the inputs are usually sourced from exchanges (mostly prices), and these strategies typically seek to identify patterns that have some explanatory power about the future. </p>
-<blockquote>
-<p>Data-driven strategies are able to discern behaviors whether they have been already named under the banner of some theory or not, which allows them to discover that something happens without having to understand why.  Many HFTs favor an entirely empirical, data-mining approach when designing their short-term trading strategies for equity, futures, and foreign exchange markets. </p>
-</blockquote>
-<p>These data-mining strategies may be more successful in HFT because, if designed well, they are able to discern how the market behaves without having to worry about the economic theory or rationalization behind this behavior.  Since there is not much good literature at this time about the theoretical underpinnings of human and computerized trading behaviors at very short-term time horizons (i.e. minutes or less), an empirical approach may actually be able to outperform a theoretical approach at this timescale.  Furthermore, at this timescale there is so much more data to work with that the empirical researcher has a better chance of finding statistically significant results in his testing. </p>
-<p><font color="#0099ff" size="4" face="黑体">Shortcomings</font></p>
-<blockquote>
-<p>The researcher must decide what data to feed the model</p>
-</blockquote>
-<p>If he allows the model to use data that have little or no connection to what he is trying to forecast, he may find results that are seemingly significant but are in reality entirely spurious.  Furthermore, if the researcher chooses the set of all data generally thought to be useful in predicting markets, the amount of searching the algorithms must conduct is so enormous as to be entirely impratical (To run a relatively thorough searching algorithm over, say, two years of intraday tick data, with a handful of inputs, might take a single computer processor about three months of continuous processing before it finds the combinations of data that have predictive power). If this was not difficult enough, whatever strategies are found in this manner require the past to look at least reasonably like the future, although the future doesn’t tend to cooperate with this plan very often or for very long. To deal with this problem, the data-mining strategy requires nearly constant adjustment to keep up with the changes going on in markets, an activity that has many risks in itself. </p>
-<blockquote>
-<p>Generating alphas using solely data-mining algorithms is somewhat dubious exercise</p>
-</blockquote>
-<p> The inputs are noisy, containing a great number of false signals that act like traps for data miners. In general, strategies that use data-mining techniques to forecast markets do not work, though there are a few exceptions. </p>
-<p> <font color="#0099ff" size="4" face="黑体">Questions</font><br> There is an analog within the discretionary trading world for data-driven quants: Technical analysts, also known as <em>chartists</em> because of their use of price and/or volume graphs to detect market patterns. They are also looking for repeated patterns in market behavior that lead to predictable outcome. </p>
-<blockquote>
-<p>What defines the <em>current market condition</em>? </p>
-</blockquote>
-<p>In the case of <em>current</em>, the present can refer to an instantaneous moment, or the last few minutes, or the last 10 years. There is no standard, and the quant must determine her preference in this regard.  In the case of <em>condition</em>, do we mean merely some aspect of price behavior, or do volumes and/or fundamental characteristics matter also?  </p>
-<blockquote>
-<p>What is the search algorithm used to find <em>similar</em> patterns? </p>
-</blockquote>
-<p>First, how to define <em>similarity</em>? Then, by what method does the algorithm determine the probability of the outcome? Choosing statistical techniques that are appropriate to the dataset is very obviously critical, and that the quant must be careful.  One of the most common follies in quant trading is to apply a statistical tool to the wrong problem. </p>
-<blockquote>
-<p>How far into the past will the search be conducted? </p>
-</blockquote>
-<p>On one hand,  more recent data matters a lot, because it is the most relevant to the immediate present and near future (human behavior changes, the way humans interact with one another evolves, market structures,too, evolve). On the other hand, with data-mining techiniques applied to such noisy dataset as capital markets present, statistical significance is always of paramount importance. The greater the amount of data, the greater one’s confidence is in the statistical conclusions drawn from the data, for most types of statistical tests. So, while the more recent past is more relevant, the more data, the merrier. </p>
-<h2 id="Implementing-the-Strategies"><a href="#Implementing-the-Strategies" class="headerlink" title="Implementing the Strategies"></a>Implementing the Strategies</h2><p>There are not many ways for alpha-focused traders to make money. But the limited selection of sources of alpha does not imply that all quants choose one of a handful of phenomena and then have a peer group to which they are substantively identical. There is in fact considerable diversity among alpha traders. This diversity stems from the way quants implement their strategies, including </p>
-<blockquote>
-<p> forecast target<br>time horizon<br>bet structure<br>investment universe<br>model defination<br>conditioning variables<br>run frequency</p>
-</blockquote>
-<p> <font color="#0099ff" size="4" face="黑体">Forecast Target</font><br> The first key component of implementation of to understand exactly what the model is trying to forecast. Models can forecasr the  direction, magnitude, and/or duration of a move and furthermore can include an assignment of confidence or probability for their forecast.  Many models forecast direction only, most notably the majority of trend-following strategies in futures markets. They seek to predict whether an asset price will rise or fall, and nothing more. Still others have specific forecasts of the size of a move, either in the form of an expected return or a price target. Some models, though they are far less common, also seek to identify how long a move might take. </p>
-<blockquote>
-<p>The <em>signal strength</em> is an important aspect of quant models. Signal strength is defined by an expected return and/or by confidence. The larger the expected return, the greater the strength of the signal, holding confidence levels constant. Similarly, the more confidence in a signal, the greater the signal strength, holding expected returns constant. In general, though certainly not always, a higher level of signal strength results in a bigger bet being taken on a position. </p>
-</blockquote>
-<p> <font color="#0099ff" size="4" face="黑体">Time horizon</font><br> Time horizon can be high-frequency (no further than the end of the current trading day), short-term (one day to two weeks), medium-term (a few weeks to a few months) and long-term (several months or longer).  A strategy applied to the very short term can look quite different from the way it would if the exact same idea was applied to the very long term.  Generally, differentiation is greater at shorter timescales than at longer ones: there is more variability between the returns of a one-minute strategy and a one-hour strategy than between a three-month and a six-month strategy, even though the interval between the latter pair is significantly longer than that between the first pair. This general rule especially holds true in more risky environments. This happens because the shorter-term strategies are making very large numbers of trades compared with the longer-term versions of the same strategies. Even a small difference in the time horizon of a strategy, when it is being run at a short timescale, can be amplified across tens of thousands of trades per day and in the millions per year. By contrast, three- and six-month versions of the same strategy are simply making a lot fewer trades, so the difference in time horizon does not get amplified.  </p>
-<p>   <font color="#0099ff" size="4" face="黑体">Bet Structure</font><br>   Bet structure is based on how the alpha model generates its forecast. Models can be made to forecast either an instrument in itself or an instrument relative to others.  A mode could forecast that gold is cheap and its price is likely to rise or that gold is cheap relative to silver, and that gold is therefore likely to outperform silver.  When looking at relative forecasts, one can forecast the behavior of smaller clusters (e.g. pairs) or larger cluster (e.g. sectors). </p>
-<blockquote>
-<p>Pairs<br>   <strong>Advantages</strong>: Smaller clusters have the advantage of being easier to understand and analyze. In particular, pairs are primarily attractive because, in theory, one can carefully select instruments that are directly comparable<br>   <strong>Disadvantages</strong>:  Very few assets can actually be compared so precisely and directly with one another. Two Internet companies might each depend significantly on revenues from their respective search engines, but they may differ along other lines. One could have more of a content-driven business while the other uses advertising to supplement the search engine revenues. Meanwhile, one could find other companies with strong advertising or content businesses, each of which shares some characteristics and sector-effects with the first pair. Here the trader is presented with a dilemma: <em>Which pairs are actually the best to use? Or to put it another way, how should the trader’s pairs best be structured?</em> </p>
-</blockquote>
-<blockquote>
-<p>Sectors<br>   <strong>Advantages</strong>: Researchers group securities together primarily in an effort to isolate and eliminate common efferts among the group. A large part of the point of grouping stocks within their market sector is to eliminate the impact of a general movement of the sector and thereby focus on the <em>relative</em> movement of stocks <em>within</em> the sector.<br>   <strong>Disadvantages</strong>: Researchers   must choose how they create these clusters, either using statistical techiniques or using heuristics (e.g. fundamentally defined industry groups). Furthermore, any market regime change would casue drastic changes in the relationships among instruments. </p>
-</blockquote>
-<p>   In general, relative alpha strategies tend to exhibit smoother returns during normal times than intrinsic alpha strategies, but they can also experience unique problems related to incorrect groupings during stressful periods. Some quants attemp to mitigate the problems associated with any particular grouping technique by utilizing several grouping techniques in concert. For example, one could first group stocks by their sectors but then refine these groupings using a more dynamic statistical approach that reflects recent correlations among the stocks. </p>
-<p>   <font color="#0099ff" size="4" face="黑体">Investment Universe</font><br>    A given strategy can be implemented in a variety of instruments,  and the quant must choose which ones to include or exclude. </p>
-<blockquote>
-<p><em>Geography</em></p>
-</blockquote>
-<p>A short-term relative mean reversion strategy traded on stocks in the United States might not behave similarly to the same strategy applied to stocks in Hong Kong. The researcher must decide where to apply the stategy. </p>
-<blockquote>
-<p><em>Asset class</em></p>
-</blockquote>
-<p>A growth strategy applied to foreign exchange markets might behave differently than one applied to equity indices. The quant must decide what asset classes to trade with each strategy. </p>
-<blockquote>
-<p><em>Instrument class</em></p>
-</blockquote>
-<p>Equity indices, as accessed through the futures markets, behave differently than single stocks, even though both belong to the equity asset class. Also, the liquidity characteristics and nature of the other participants in a given market differ from one instrument class to another, and these are some of the considerations quants must make regarding what kinds of instruments to trade. </p>
-<p>The choice of an investment universe is dependent on several strong preferences that quants tend to have.</p>
-<ol>
-<li>The quant generally prefers liquidity in the underlying instruments so that estimations of transaction costs are reliable. </li>
-<li>Quants generally require large quantities of high-quality data. In general, such data can be found in highly liquid and developed markets. </li>
-<li>Quants tend to prefer instruments that behave in a manner conducive to being predicted by systematic models. Let’s take <em>biotechnology stocks</em> as an example, some quants exclude them because they are subject to sudden, violent price changes based on events such as government approval or rejection of their latest drug. Although physicians with a biotech specialization may have some intuitions on this subject, it’s simply not somthing that most quants can model. </li>
-</ol>
-<p>As a result of these preferences, the most typical asset classes and instruments in which one can find quants participanting are common stocks, futures (especially on bonds and equity indices), and foreign exchange markets.  Some strategies might trade the fixed-income asset class using instruments other than futures (e.g., swaps or cash bonds), though these are significantly less common today than they were in the middle of late 1990. Geographically, the bulk of quant trading occurs in the United States, developed Europe, and Japan, with lesser amounts done in other parts of North America and developed Asia. Quants are almost completely absent from illiquid instruments, or those traded over the counter, such as corporate or convertible bonds, and are less (but increasingly) common in emerging markets. </p>
-<p><font color="#0099ff" size="4" face="黑体">Model Definition</font><br>An idea for a trading stratefy is insufficient for use as a trading strategy:  The quant must specifically define every aspect of the strategy before it is usable. For example, how to define a trend? Some simply compute the total return of an instrument over some historical period, and if that number is positive, a positive trend is identified. Other trend traders use moving average approaches. Still other trend strategies seek to identify the breakout of the very early stages of a trend, found using specific price patterns they believe are present in this critical phase, but they do not attempt to determine whether a long-term trend is actually in place or not.  There are but a few of the more common ways a trend can be defined. Just so, each kind of alpha strategy can be defined in various ways, and it is a significant part of the quant’s job to decide precisely how to specify the strategy mathematically. This is an area for an investor in quant trading to study carefully because it is often a source of differentiation—and potentially of comparative advantage—for a quant. </p>
-<blockquote>
-<p>One especially important type of specification is in the form of setting parameters for a model. The specification of parameters is also an area in which some quants utilize machine learning or data-mining techniques. Machine learning algorithms are designed to provide an intelligent and scientifically valid way of testing many potential sets of specifications without overfitting. </p>
-<blockquote>
-<p> A subset of the problem of determining parameters related to how often the models themselves are adjusted for more recent data. This process is known as <em>refitting</em>, because some of the same work that goes on in the original research process  is repeated in live trading in an attempt to refresh the model and make it as adaptive as possible to current market conditions.  Because this can be a computationally intensive process, sometimes involving millions or even billions of calculations, many quants refit their models infrequently or not at all. Refitting also leads to a greater risk of overfitting, a very treacherous problem indeed, since spurious and fleeting relationships may be mistaken for valid, lasting ones. </p>
-</blockquote>
-</blockquote>
-<p><font color="#0099ff" size="4" face="黑体">Conditioning Variables</font><br>Utilizing conditioning variables is how most rule-based pattern recognition strategies are designed. Like data-driven strategies, they are looking for repeated patterns in market behavior, but theory-driven pattern-recognition models will begin with predefined rules. Data-driven traders rely on their algorithms to determine what a <em>pattern</em> is in the first place.  There are two basic types of conditioning variables:</p>
-<blockquote>
-<p>Modifying conditioner<br>Secondary conditioner</p>
-</blockquote>
-<p><strong>Modifying conditioner</strong> takes a given signal and changes whether or how it is used, generally based on characteristics of the signal itself or its results.   A strategist may find that utilizing a simple trend indicator is not a sufficiently interesting strategy to pursue. Many experienced practitioners will admit that, without the <em>money management</em> or <em>risk management</em> rules they employ, their strategies would be basically uninvestable. These rules can be properly be thought of as conditioning variables for the trend-following strategy. </p>
-<blockquote>
-<p>Stop-loss </p>
-</blockquote>
-<p>A stop-loss is a common conditioning variable to pair with a trend-following strategy. The idea would be to follow the trend, unless that trend has been reversing and causing losses to the position sufficient to trigger a stop-loss. Stop-losses are generally employed when strategies have many <em>false</em> signals, but where the <em>good</em> signals can yield significant profits. Just so, most directional trend-following strategies make money on a minority of their trades (often less than 40 percent of them!), but the gain on their winners is substantially larger than the losses on their losers (because of stop-loss techniques). </p>
-<blockquote>
-<p>Profit-targets</p>
-</blockquote>
-<p>Profit-targets are utilized when the strategist believes that the position gets riskier as it generates profits. This is a reasonable enough concept: Markets rarely go in the same direction indefinitely, so it may make sense to take profits if they’ve been going the same way long enough for the strategy to generate significant profits. </p>
-<blockquote>
-<p>Time-stops</p>
-</blockquote>
-<p>Time-stops are utilized to avoid the problem of holding positions on the basis of signals that may have been triggered far enough in the past as to be considered stale. It’s a way of enforcing a refreshing of the bets being taken in the portfolio, among other things. </p>
-<p><strong>Secondary conditioner</strong> requires the agreement across multiple types of signals to trigger a tradable forecast. For example, in the <em>Growth at a Reasonable Price</em> strategy,  if a company is identified as being both growthing and inexpensive, it is a candidate to buy. Cheapness on its own would not justify a purchase, just as growth on its own would not. In price-driven strategies, sometimes trend at various timescales, or trend and mean reversion, are combined. For example, a mean reversion strategy could be conditioned to buy instruments that have experienced price declines, but only when that causes the resulting position to be in the direction of the longer-term trend (i.e., this strategy would buy dips in up-trending markets, or short sell run-ups in down-trending markets). </p>
-<p><font color="#0099ff" size="4" face="黑体">Run Frequency</font><br>A final component of building a given alpha model is determining the <em>run frequency</em>, or the frequency with which the model is actually run to seek new trading ideas.  More frequent model runs lead to a greater probability that the model is moving the portfolio around based on noisy data that don’t actually contain much meaning. On the other hand, less frequent model runs are also prone to problems associated with the moment of observation of markets. If  a strategy is run once a month, it could miss opportunities to trade at more favorable prices that occur during the month while the  model is dormant. Alternatively, the model may attempt in vain to trade at attractive, but quickly fleeting, prices that occur if there has been some aberration just around the time of the model being run.  Whether more frequent or less frequent model runs  are better depends on many other aspects of the strategy, most especially the time horizon of the forecast and the kinds of inputs. </p>
-<p>To succeed in quant trading, each of these decisions requires good judgment on the part of the quant. In short, successful quants are characterized in part by an incredible attention to detail and tirelessness in seeking the right questions to ask and the best solutions to address them. </p>
-<h2 id="Blending-Alpha-Models"><a href="#Blending-Alpha-Models" class="headerlink" title="Blending Alpha Models"></a>Blending Alpha Models</h2><p>The quant is not limited to choosing just one approach to a given alpha model. Instead, he is equally free to choose to employ multiple types of alpha models. The method used to combine these alpha models is an arena rich with possibilities. The most sophisticated and successful quants tend to utilize several kinds of alpha strategies, including trend and reversion, and various kinds of fundamental approaches across a variety of time horizons, trade structures, instruments, and geographies. Such quants benefit from alpha diversification in exactly the same way that diversification is helpful in so many other aspects of financial life. </p>
-<h3 id="Approaches"><a href="#Approaches" class="headerlink" title="Approaches"></a>Approaches</h3><p>The three most common quant approaches to blending forecasts are via </p>
-<blockquote>
-<p>linear models<br>nonlinear models<br>machine learning models</p>
-</blockquote>
-<p>A siginificant <font color="#0099ff" size="3" face="黑体">fourth</font>  school of thought believes that alpha models should not be combined at all. Instead, several portfolios are constructed, each based on the output from a given alpha model. These factor portfolios are then combined using any of the portfolio construction techniques.   It’s bear noticing that the best way to blend alphas depends on the model.  As in the case of an alphs model, the purpose of a mixing model is to find the combination of alphas that best predicts the future. All other things being equal, it is very likely that any reasonaly intelligent combination of alphas will do a better job together than any one of them could do individually over time. </p>
-<p><font color="#0099ff" size="4" face="黑体">Linear Models</font><br>Linear models are by far the most common way in which quants combine alpha factors to construct a composite forecast. In linear models, the inclusion of one factor is independent of the inclusion of other factors, and each factor is expected to be additive, independently of the other factors that might be included or excluded.  The first step in using a linear model in this way is to assign a weight to each alpha factor. This is typically done using a technique known as <em>multiple regression</em>. The presumption is that, if a model reasonably explains the past, it has a reasonable chance of explaining the future well enough to make a profit.  A special case of linear models is the equal-weighted model. Though not highly quantitaive, equal-weighting methods abound among quant traders. The general idea behind equal weighting is that the trader has no confidence in his ability to define more accurate weights and therefore decides to give all the alpha factors equal importance. A variance of this approach gives wach factor an <em>equal risk</em> weighting. </p>
-<p><font color="#0099ff" size="4" face="黑体">Nonlinear Models</font><br>In contrast to linear models, nonlinear models are based on the premise that the relationship between the variables used to make forecasts either is not independent (i.e., each variable is not expected to add value independently of the others) or else the relationship changes over time. As such, the two main types of nonlinear models are</p>
-<blockquote>
-<p>Conditional models<br>Rotation models </p>
-</blockquote>
-<p><strong>Conditional models</strong> base the weight of one alpha factor on the reading of another factor.  For example, a conditional model might indicate that E/P yields should drive forecasts, but <em>only</em> when the price trends are <em>in agreement</em> with the E/P yields: the highest-yielding stocks would be candidates to be bought only if the price trends of these stocks were also positive. It is possible to utilize a conditioning variable that simply increases or decreases the weight of a given factor based on the values of other factors at that point in time.  Another type of conditional model for assigning weights to various forecasts is to consider variables  <font color="#0099ff" size="3" face="黑体">external</font>  to those forecasts as the drivers of weights. For example, some practitioners believe that stat arb strategies perform better when market volatility is at elevated levels, and when stocks’ correlations to each other are at relatively low levels. Thus, a firm trading both mean reversion stat arb and directional trend strategies might overweight the stat arb component when volatility is high and correlations are low. When the opposite is true in both cases, perhaps they overweight the trend strategies. And at other times, perhaps they equally weight both strategies. </p>
-<p><strong>Rotation models</strong>  Rather than following trends in markets themselves, this type of model follows trends in the performance of the alpha models. These are similar to linear models except that the weights fluctuate over time based on updated calculations of the various signals’ weights. This method usually results in giving higher weights to the factors that have performed better recently. As such, this is a form of trend following in the timing of alpha factors. </p>
-<p><font color="#0099ff" size="4" face="黑体">Machine Learning Models</font><br>As in the case of rotational models, many machine learning approaches to mixing alpha factors periodically update the optimal weights based on the ever-changing and ever-growing set of data available. Unlike the example of using machine learning for the generation of actual alpha signals, applying machine learning to determine the weights of various alpha forecasts is more common and significantly more successful. </p>
-<p>Signal mixing shares some similarities with portfolio construction. Both are questions of sizing and combining. However, they are mostly distinct and seperate processes. Signal-mixing models size multiple alpha signals to arrive at one composite forecast per instrument, which is then used in portfolio construction. Portfolio construction models take multiple kinds of signals as inputs, including alpha signals, risk models, and transaction cost models, and attempt to size individual positions correctively, given these inputs. </p>
-
-          
+Risk management should not be thought of solely as the av
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/blog/2019/06/25/risk-models/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
