@@ -249,6 +249,220 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yangqingqingkerry.github.io/blog/blog/2019/06/30/research/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kerry Yang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MyBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2019/06/30/research/" itemprop="url">research</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-30T20:41:59+08:00">
+                2019-06-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Inside-the-Black-Box/" itemprop="url" rel="index">
+                    <span itemprop="name">Inside the Black Box</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>Everything should be made as simple as possible, but not simpler — Albert Einstein </p>
+</blockquote>
+<p>A characteristic shared among well-behaved quants is their adherence to the <em>scientific method</em> in conducting research, which is of course the way science is done in every other field of study. One important distinction, however, exists between quants and scientists. Scientists conduct research for many purposes, including learning the truth that drives the natural world. And in the natural sciences, a good theory does not require modification to continue to be valid (e.g., Einstein’s relativity). Quant researchers, by contrast, have no choice but to conduct ongoing research and to take every measure to ensure that their research output is prolific. This is because, though nature is relatively stable, the markets are not. Whether from regulatory changes, the changing whims of the aggregate psychology of investors and traders, the constant competition for alpha among traders, or whatever other phenomena, the markets are in fact highly dynamic processes. For this reason, quant traders must constantly conduct research so that they can evolve with as much rigor and forethought as they used in developing their original strategies. </p>
+<h2 id="Idea-Generation"><a href="#Idea-Generation" class="headerlink" title="Idea Generation"></a>Idea Generation</h2><p>Four common sources of ideas are: </p>
+<blockquote>
+<p>Observations of the markets<br>Academic literature<br>Migration<br>Lessons from the activities of discretionary traders </p>
+</blockquote>
+<p><strong>Observations of the market</strong><br>An excellent example comes from the history of the oldest of quant trading strategies: trend following in futures contracts. Richard Donchian is the father of trend following. He observed that there are sweeping moves in many markets that folks tend to call bull or bear markets; he postulated that one could build a system that would detect that these trends had begun and then ride the wave. He translated his philosophy into the following strategy: <font color="#0099ff" size="3" face="黑体">If a given market’s price is above the highest closing price over the past two weeks, buy that market. If its price goes below the lowest closing price over the past two weeks, sell that market short. In the meantime, hold whatever position you have in that market. </font></p>
+<p><strong>Lessons from the activities of discretionary traders</strong><br>An old adage among successful traders is <em>Ride winners and cut losers</em>. This idea can easily be formalized and tested and has come to be known as a <em>stop-loss policy</em>, which involves systematically realizing losses on positions that are not working out.  Technical trader is the lebel applied to a trader who subjectively analyzes graphs of market prices and makes decisions based on <em>rules</em> about the implications of various shapes of such graphs. These shapes are given names such as a <em>head and shoulders pattern</em> or an <em>upward triangle pattern</em>. </p>
+<h2 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h2><p><font color="#0099ff" size="4" face="黑体">In-Sample Testing and Training </font><br>In quant trading, models are approximations of the world. They are used to predict the future using data as inputs. The first part of the testing process is to <em>train</em> a model by finding optimal parameters over an in-sample period. Imagine that we want to test the idea that cheap stocks outperform expensive stocks. We even theorize that the metric we will use to define cheapness is the earnings yield (earnings/price), such that a higher earnings yield implies a cheaper stock. But what level of yield is sufficiently high to cause us to think that the stock will outperform? And what level of earnings yield is sufficiently low to imply that a stock is expensive and is likely to underperform? These levels are parameters. </p>
+<blockquote>
+<p><strong>Issues</strong>: In the real world, the quant’s model is constantly buffeted by new information and unpredictable events. But the historical data from the in-sample period are known to the model in theor entirety, and nothing about them needs to be predicted.  </p>
+</blockquote>
+<p>An important decision lies in the process of in-sample testing: What exactly constitutes the sample chosen for fitting the model?  A sample is characterized by two things: its breadth and its length. As far as the breadth of the in-sample test, the researcher must choose how many of the stocks to use and decide how to choose the ones that are used. Should she use a broad cross-section of stocks across sectors and capitalization levels? Should she use a narrower cross-section, or should she choose all the stocks? As to length of time, the researcher must consider what window of data will be available to use for fitting the model. Will it be the most recent data or the oldest data?  The most common perference among quants would be to use all the instruments for some subset of the time, but this is by no means universal, since there is a trade-off here to consider: By using more data, the quant has a broader array of scenarios and market events that the model has to fit itself to, which can help make it more robust. By the time it has to succeed in real conditions, it has already <em>seen</em> and been adapted to the scenarios and environments found in the large in-sample period. On the other hand, the more data the model is allowed to see while it is being tuned, the greater the risk of creating a model that is nothing more than a good explanation of the past. For this reason, many quants utilize a <font color="#0099ff" size="s" face="黑体">reasonable </font> cross-section of the data for the purpose of in-sample testing and model fitting. </p>
+<p><font color="#0099ff" size="4" face="黑体">What Constitutes a <em>Good</em> Model?  </font></p>
+<blockquote>
+<p>Example: Equity risk premium<br><strong>Strategy</strong>: Taking the difference between the earnings yield of the S&amp;P 500 and the 10-year Treasury note each day. If the S&amp;P’s yield is higher thatn the bond’s, this is viewed as a signal to be long stocks. If the S&amp;P’s yield is lower than the bond’s, this is a signal to be short stocks. </p>
+</blockquote>
+<p> <strong>Metrics to determine the <em>goodness</em> of a model</strong></p>
+<ol>
+<li><strong>Graph of the cumulative profits over time</strong> One picture is worth a thousand words. From a graph of cumulative profits, you can see whether the strategy would have made money, how smoothly, and with what sort of downside risk, just to name a few things. </li>
+<li><strong>Average Rate of Return</strong>The average rate of return indicates how well the strategy actually worked in the past. If it didn’t work in the testing phase, it’s very unlikely to work in real life. </li>
+<li><strong>Variability of Returns Over Time</strong> The variability of returns over time is helpful in deciding whether the strategy is worth owning. In general, the less the variability for a given level of returns, the better a strategy is considered to be. The idea is that one can have more confidence in a given return if the uncertainty around it is low, and more confidence is a good thing. </li>
+<li><strong>Lumpiness</strong> Lumpiness is the portion of a strategy’s total return that comes from periods that are significantly above average. This is another way of measuring <em>consistency</em> of returns. Despite the importance of thie metric, it is not always the case that consistency should be a primary goal. </li>
+<li><strong>Worst Peak-to-Valley Drawdown(s)</strong>  The metric measures the maximum decline from any cumulative peak in the profit curve. The lower the drawdown of a strategy, the better. Many quants measure not just one drawdown but several, to get a sense of both the extreme and more routine downside historical risks of their strategies. It’s also typical to measure recovery times after drawdowns, which give the researcher a sense of the model’s behavior after it’s done poorly. Drawdown information must be handled with care of <em>sample bias</em>, which can be handled with <em>resampling</em>. </li>
+<li><strong>Predictive Power</strong>  A statistic known as the <em>R-squared</em> shows how much of the variability of the thing being predicted can be accounted for by the thing you’re using to predict it, or, in other words, how much of the variability in the targets is explained by the signal.  Quants frequently utilize an additional approach to ascertaining predictive power. This approach involves <em>bucketing</em> the returns of the instruments included in the test by the deciles (or any other quantile prefered by the researcher) of the underlying forecasts. In general, a model with reliable predictive power is one that demonstrates that the worst returns are found in the bucket for which the worst returns are expected, with each successive bucket of improving expected returns in fact performing better than the prior bucket. If the returns of the instruments being forecast are not monotonically improving w ith the forecast of them, it could be an indication that the strategy is working purely by accident. </li>
+<li><strong>Percentage Winning Trades or Winning Time Periods</strong>This percentage is another measure of consistency. It tells the researcher whether the system tends to make its profits from a small portion of the trades that happened to do very well or from a large number of trades, each of which might contribute only modestly to the bottom line. In both cases, one tends to have more confidence in strategies with greater consistency. </li>
+<li><strong>Various Ratios of Return versus Risk</strong> Sharp ratio, Information ratio,  Sterling ration (average return divided by the variability of below-average returns), Calmar ratio (average return divided by the worst peak-to-valley drawdown), and the Omega ratio (the sum of all positive returns divided by the sum of all negative returns). </li>
+<li><strong>Relationship with Other Strategies</strong> Many quants utilize several kinds of strategies at once. As such, the quant is effectively managing a <em>portfolio of strategies</em>. Comparing the results of the existing strategy with and without the new idea. A significant improvement in the results indicates that there is a synergistic relationship between the new idea and the existing strategy. </li>
+<li><strong>Time Dacay</strong> Many quants will seek to understand what their strategies’ returns would be if they must initiate trades on a lagged basis after they receive a trading signal.   <font color="#0099ff" size="3" face="黑体">Imagine that a researcher develops a strategy to trade stocks in response to changes in recommendations by Wall Street analysts. Increases in the level of analyst’s consensus recommendations for a company lead to a targeted long position in that company, whereas deterioration in the aggregate recommendation level would lead to a targeted short position in the company. This strategy is popular and followed by many quants. However, its effects are very short-lived and are very sensitive to the timing of the information received, since the downgrades/upgrades all take place before the market opened.</font>  As such, the quant trader must be careful not to allow his simulation to assume that he was able to transaction early enough to capture any of the information. </li>
+</ol>
+<ol start="11">
+<li><strong>Sensitivity to Specific Parameters</strong>  If E/P strategy results in a significantly different outcome  with slightly differing parameters, we should mistrust both results and use neither in out model. What many researchers look for is smoothness of the goodness of outcomes with respect to parameter values. Near-neighboring sets of parameters should result in fairly similar results, and if they don’t, a researcher should be a bit suspicious about them, because such results may indicate <em>overfitting</em>.</li>
+</ol>
+<p><font color="#0099ff" size="4" face="黑体">Overfitting </font><br>Overfitting a mode essentially implies that the researcher is asking too much of the data. The more classical defination is that a researcher has built a model that closely explains the past, but which is a pool guide to the future. This can happen in several ways. </p>
+<blockquote>
+<p>The researcher must be careful about the complexity of a model</p>
+</blockquote>
+<p>Complexity in a model can come from a couple of sources. One is the number of predictive factors. </p>
+<blockquote>
+<p>A researcher can create a very complex model in terms of the conditionalities utilized</p>
+</blockquote>
+<p>A simple model might call for a long position to be initiated in an instrument if that instrument is up more than some amount over the past 10 days. A more complex model might call for the long position to be initiated if the instrument is down over the past one day, up over the past 10 days, down over the past 20 days, and up over the past 100 days…<br>A related type of overfitting can be seen in strategies that trade only extremely infrequently. Here, we are concerned with the problem that a small number of trades, no matter how profitable, is unlikely to provide strong statistical significance.</p>
+<blockquote>
+<p>Specification of parameters</p>
+</blockquote>
+<p>For example, in constructing a trend model, a researcher is making the claim that some characteristic of the change in price over some period in the past is indicative of a likely future continuation of that move. There are several parameters one could imagine being relevant to such a model. For example,</p>
+<ul>
+<li>What is the historical period over which the price change is computed? </li>
+<li>If there is a minimum size for such a move to be considered significant, what is that minimum size? </li>
+</ul>
+<p>Quants can fix parameters in a few ways. One is to set them discretionarily, based on a prior conviction about how the markets function. The results of a backtest will then indicate how much promise the strategy has. A second approach to parameter fitting is to have a part of the backtest show the results of the strategy historically over a variety of parameter values, and to select the parameters that optimize the <em>goodness</em> of the result. This decision can be subjective or it can be done by an algorithm that reflects some rule-based approach to parameter selection.  One final note on parameter fitting is that parameters can either be fit once, or they can be fit repeatedly in the future, as new data are generated in the market. <font color="#0099ff" size="3" face="黑体"> However, the act of repeatedly fitting parameters itself increases the complexity of a model. And depending on exactly how such a re-fitting is implemented, this approach may also rely on fewer data than are desirable for an exercise so fraught with overfitting peril already.</font></p>
+<blockquote>
+<p>Capital markets generate an enormous amount of data. However, the data are extremely noisy</p>
+</blockquote>
+<p>For example, tick-size data. Past data yield extremely little information about future fluctuations. There is just very little signal buried in all that noise.  Something which, therefore, closely explains such a noisy process must be viewed with an extreme amount of skepticism. </p>
+<p><font color="#0099ff" size="4" face="黑体">Out-of-Sample Testing</font><br>The model’s parameters have by now been fixed using a different set of data (from the in-sample testing period), and it’s simply a question of whether the model, with whatever parameters are chosen, really works in a new, out-of-sample data set. </p>
+<p><strong>Statistics</strong></p>
+<blockquote>
+<p>Ratio of the R-square in the out-of-sample test to R-square in the in-sample test</p>
+</blockquote>
+<p>If the out-of-sample R-square is relatively close to the in-sample one, that is considered a good thing. If it is significantly smaller, the researcher must be suspicious about the prospects for his model’s success.  There are many approaches to out-of-sample testing. For example, the <em>rolling out-of-sample</em> technique in which the single oldest data point is discarded and one new data point is added to both the fitting (in-sample) and testing (out-of-sample) period. All the data that were set aside from the in-sample test are used in the out-of-sample test. The rolling out-of-sample technique is thought to help refresh the model over time so that it does not depend on a single set of tests that might have been run some years previously. However, depending on the circumstances, this approach can have the weakness of giving the model the benefit of constant knowledge of the recent past, which could reduce its robustness. Still another approach utilizes an ever-growing window of data for ongoing out-of-sample testing as time passes and more data are collected.   Though the objective of out-of-sample testing is clearly valid, it turns out to be a rather tricky thing to do correctly. <strong>Risk</strong>: regime switch + look-ahead bias (going back and forth between the in- and out-of-sample data). For example, the Internet bubble of the late 1990s.  Another appoach is to determine that out-of-sample testing is a bit of a myth in the first place, especially for any experienced, observant researcher.  As a result, out-of-sample testing is <font color="#0099ff" size="3" face="黑体">foregone in favor of a combination of extra vigilance regarding the in-sample results, coupled with a minimum of parameter fitting.</font>  In this methodology, the quant uses as few parameters as possible, sets the values at some reasonable level, and simply tests the strategy and looks for all those metrics of good performance to have sufficiently high readings. </p>
+<p><font color="#0099ff" size="4" face="黑体">Assumptions of Testing</font>  </p>
+<blockquote>
+<p>Transaction costs -&gt; frequency<br>Short availability</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+        <div>
+    
+        </div>
+
+
+    
+
+    
+
+    
+
+    
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://yangqingqingkerry.github.io/blog/blog/2019/06/27/execution-and-transaction-cost-models/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1000,7 +1214,7 @@ s->o(yes)->e</textarea><textarea id="flowchart-0-options" style="display: none">
 <blockquote>
 <p>Example: stat arb：<br><strong>Risk</strong>: Any time that the market regime changes, the relationships among instruments frequently also change, which can lead the system to mistakenly group things together, even though they no longer will behave like each other<br><strong>Idea</strong>: Relative attractiveness analysis </p>
 </blockquote>
-<p> Stat arb ushered  in an important change in worldwide, one that focused on whether Company A was over- or undervalued relative to Company B rather than whether Company A was simply cheap or expensive in itself. This important evolution would lead to the creation of many strategies based on forecasts of relative attractiveness.  Trend and mean reversion strategies represent a large portion of all quant trading. After all, price data are plentiful and always changing, presenting the quant with many opportunities to trade.  <img src="./images/1.png" alt>  It may be interesting to note that trend and mean reversion, though they are theoretically opposite ideas, both seem to work. How is this possible? Largely, it’s possible because of different timeframes.   Trends tend to  occur over longer time horizons, whereas reversions tend to happen over shorter-term time horizons.  You can also find that the strategies are likely to work well in different regimes, and in some cases, mean reversion strategies can work as the longer-term indicator, while momentum can be used as a faster indicator. </p>
+<p> Stat arb ushered  in an important change in worldwide, one that focused on whether Company A was over- or undervalued relative to Company B rather than whether Company A was simply cheap or expensive in itself. This important evolution would lead to the creation of many strategies based on forecasts of relative attractiveness.  Trend and mean reversion strategies represent a large portion of all quant trading. After all, price data are plentiful and always changing, presenting the quant with many opportunities to trade. <img src="./images/1.png" alt>  It may be interesting to note that trend and mean reversion, though they are theoretically opposite ideas, both seem to work. How is this possible? Largely, it’s possible because of different timeframes.   Trends tend to  occur over longer time horizons, whereas reversions tend to happen over shorter-term time horizons.  You can also find that the strategies are likely to work well in different regimes, and in some cases, mean reversion strategies can work as the longer-term indicator, while momentum can be used as a faster indicator. </p>
 <p><strong>Technical Sentiment</strong>  Sentiment stategies track investor sentiment—expressed through price, volume, and volatility behavior—as an indicator of future returns.   Unlike in the cases of momentum and mean reversion, there is no clear economic rationale that gives birth to a strategy. In other words, there are widely varying views on the value and use of sentiment information in forecasting, To some practitioners, a high degree of positive sentiment in some instrument would indicate that the instrument is already overbought and therefore ready to decline. To others, high positive sentiment would indicate that the instrument has support to move higher. For still others, sentiment is only used as a conditioning variable, for example by utilizing a trend-following strategy only if the volumes that were associated with the price movements were significant, whereas a low-volume trend might be ignored.  There are, however, several examples of technical sentiment strategies that can be thought of as standalone ways to forecast future direction. </p>
 <blockquote>
 <p><strong>Example 1</strong>: Look at the volume of puts and calls. If puts have higher volumes r.t. calls than they normally do, it might be an indicator that investors are worrried about a downturn. If puts have lower volumes versus calls than normal, it might be a bullish sentiment indicator. </p>
@@ -1225,7 +1439,7 @@ s->o(yes)->e</textarea><textarea id="flowchart-0-options" style="display: none">
               
                 <a href="/blog/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

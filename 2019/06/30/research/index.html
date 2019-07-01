@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Quant Trading,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Everything should be made as simple as possible, but not simpler — Albert Einstein   A characteristic shared among well-behaved quants is their adherence to the scientific method in conducting resear">
+<meta name="keywords" content="Quant Trading">
+<meta property="og:type" content="article">
+<meta property="og:title" content="research">
+<meta property="og:url" content="https://yangqingqingkerry.github.io/blog/2019/06/30/research/index.html">
+<meta property="og:site_name" content="MyBlog">
+<meta property="og:description" content="Everything should be made as simple as possible, but not simpler — Albert Einstein   A characteristic shared among well-behaved quants is their adherence to the scientific method in conducting resear">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-01T03:27:42.692Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="research">
+<meta name="twitter:description" content="Everything should be made as simple as possible, but not simpler — Albert Einstein   A characteristic shared among well-behaved quants is their adherence to the scientific method in conducting resear">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://yangqingqingkerry.github.io/blog/2019/06/30/research/">
+
+
+
+
+
+  <title>research | MyBlog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MyBlog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/blog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/blog/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/blog/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/blog/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yangqingqingkerry.github.io/blog/blog/2019/06/30/research/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kerry Yang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MyBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">research</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-30T20:41:59+08:00">
+                2019-06-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Inside-the-Black-Box/" itemprop="url" rel="index">
+                    <span itemprop="name">Inside the Black Box</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>Everything should be made as simple as possible, but not simpler — Albert Einstein </p>
+</blockquote>
+<p>A characteristic shared among well-behaved quants is their adherence to the <em>scientific method</em> in conducting research, which is of course the way science is done in every other field of study. One important distinction, however, exists between quants and scientists. Scientists conduct research for many purposes, including learning the truth that drives the natural world. And in the natural sciences, a good theory does not require modification to continue to be valid (e.g., Einstein’s relativity). Quant researchers, by contrast, have no choice but to conduct ongoing research and to take every measure to ensure that their research output is prolific. This is because, though nature is relatively stable, the markets are not. Whether from regulatory changes, the changing whims of the aggregate psychology of investors and traders, the constant competition for alpha among traders, or whatever other phenomena, the markets are in fact highly dynamic processes. For this reason, quant traders must constantly conduct research so that they can evolve with as much rigor and forethought as they used in developing their original strategies. </p>
+<h2 id="Idea-Generation"><a href="#Idea-Generation" class="headerlink" title="Idea Generation"></a>Idea Generation</h2><p>Four common sources of ideas are: </p>
+<blockquote>
+<p>Observations of the markets<br>Academic literature<br>Migration<br>Lessons from the activities of discretionary traders </p>
+</blockquote>
+<p><strong>Observations of the market</strong><br>An excellent example comes from the history of the oldest of quant trading strategies: trend following in futures contracts. Richard Donchian is the father of trend following. He observed that there are sweeping moves in many markets that folks tend to call bull or bear markets; he postulated that one could build a system that would detect that these trends had begun and then ride the wave. He translated his philosophy into the following strategy: <font color="#0099ff" size="3" face="黑体">If a given market’s price is above the highest closing price over the past two weeks, buy that market. If its price goes below the lowest closing price over the past two weeks, sell that market short. In the meantime, hold whatever position you have in that market. </font></p>
+<p><strong>Lessons from the activities of discretionary traders</strong><br>An old adage among successful traders is <em>Ride winners and cut losers</em>. This idea can easily be formalized and tested and has come to be known as a <em>stop-loss policy</em>, which involves systematically realizing losses on positions that are not working out.  Technical trader is the lebel applied to a trader who subjectively analyzes graphs of market prices and makes decisions based on <em>rules</em> about the implications of various shapes of such graphs. These shapes are given names such as a <em>head and shoulders pattern</em> or an <em>upward triangle pattern</em>. </p>
+<h2 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h2><p><font color="#0099ff" size="4" face="黑体">In-Sample Testing and Training </font><br>In quant trading, models are approximations of the world. They are used to predict the future using data as inputs. The first part of the testing process is to <em>train</em> a model by finding optimal parameters over an in-sample period. Imagine that we want to test the idea that cheap stocks outperform expensive stocks. We even theorize that the metric we will use to define cheapness is the earnings yield (earnings/price), such that a higher earnings yield implies a cheaper stock. But what level of yield is sufficiently high to cause us to think that the stock will outperform? And what level of earnings yield is sufficiently low to imply that a stock is expensive and is likely to underperform? These levels are parameters. </p>
+<blockquote>
+<p><strong>Issues</strong>: In the real world, the quant’s model is constantly buffeted by new information and unpredictable events. But the historical data from the in-sample period are known to the model in theor entirety, and nothing about them needs to be predicted.  </p>
+</blockquote>
+<p>An important decision lies in the process of in-sample testing: What exactly constitutes the sample chosen for fitting the model?  A sample is characterized by two things: its breadth and its length. As far as the breadth of the in-sample test, the researcher must choose how many of the stocks to use and decide how to choose the ones that are used. Should she use a broad cross-section of stocks across sectors and capitalization levels? Should she use a narrower cross-section, or should she choose all the stocks? As to length of time, the researcher must consider what window of data will be available to use for fitting the model. Will it be the most recent data or the oldest data?  The most common perference among quants would be to use all the instruments for some subset of the time, but this is by no means universal, since there is a trade-off here to consider: By using more data, the quant has a broader array of scenarios and market events that the model has to fit itself to, which can help make it more robust. By the time it has to succeed in real conditions, it has already <em>seen</em> and been adapted to the scenarios and environments found in the large in-sample period. On the other hand, the more data the model is allowed to see while it is being tuned, the greater the risk of creating a model that is nothing more than a good explanation of the past. For this reason, many quants utilize a <font color="#0099ff" size="s" face="黑体">reasonable </font> cross-section of the data for the purpose of in-sample testing and model fitting. </p>
+<p><font color="#0099ff" size="4" face="黑体">What Constitutes a <em>Good</em> Model?  </font></p>
+<blockquote>
+<p>Example: Equity risk premium<br><strong>Strategy</strong>: Taking the difference between the earnings yield of the S&amp;P 500 and the 10-year Treasury note each day. If the S&amp;P’s yield is higher thatn the bond’s, this is viewed as a signal to be long stocks. If the S&amp;P’s yield is lower than the bond’s, this is a signal to be short stocks. </p>
+</blockquote>
+<p> <strong>Metrics to determine the <em>goodness</em> of a model</strong></p>
+<ol>
+<li><strong>Graph of the cumulative profits over time</strong> One picture is worth a thousand words. From a graph of cumulative profits, you can see whether the strategy would have made money, how smoothly, and with what sort of downside risk, just to name a few things. </li>
+<li><strong>Average Rate of Return</strong>The average rate of return indicates how well the strategy actually worked in the past. If it didn’t work in the testing phase, it’s very unlikely to work in real life. </li>
+<li><strong>Variability of Returns Over Time</strong> The variability of returns over time is helpful in deciding whether the strategy is worth owning. In general, the less the variability for a given level of returns, the better a strategy is considered to be. The idea is that one can have more confidence in a given return if the uncertainty around it is low, and more confidence is a good thing. </li>
+<li><strong>Lumpiness</strong> Lumpiness is the portion of a strategy’s total return that comes from periods that are significantly above average. This is another way of measuring <em>consistency</em> of returns. Despite the importance of thie metric, it is not always the case that consistency should be a primary goal. </li>
+<li><strong>Worst Peak-to-Valley Drawdown(s)</strong>  The metric measures the maximum decline from any cumulative peak in the profit curve. The lower the drawdown of a strategy, the better. Many quants measure not just one drawdown but several, to get a sense of both the extreme and more routine downside historical risks of their strategies. It’s also typical to measure recovery times after drawdowns, which give the researcher a sense of the model’s behavior after it’s done poorly. Drawdown information must be handled with care of <em>sample bias</em>, which can be handled with <em>resampling</em>. </li>
+<li><strong>Predictive Power</strong>  A statistic known as the <em>R-squared</em> shows how much of the variability of the thing being predicted can be accounted for by the thing you’re using to predict it, or, in other words, how much of the variability in the targets is explained by the signal.  Quants frequently utilize an additional approach to ascertaining predictive power. This approach involves <em>bucketing</em> the returns of the instruments included in the test by the deciles (or any other quantile prefered by the researcher) of the underlying forecasts. In general, a model with reliable predictive power is one that demonstrates that the worst returns are found in the bucket for which the worst returns are expected, with each successive bucket of improving expected returns in fact performing better than the prior bucket. If the returns of the instruments being forecast are not monotonically improving w ith the forecast of them, it could be an indication that the strategy is working purely by accident. </li>
+<li><strong>Percentage Winning Trades or Winning Time Periods</strong>This percentage is another measure of consistency. It tells the researcher whether the system tends to make its profits from a small portion of the trades that happened to do very well or from a large number of trades, each of which might contribute only modestly to the bottom line. In both cases, one tends to have more confidence in strategies with greater consistency. </li>
+<li><strong>Various Ratios of Return versus Risk</strong> Sharp ratio, Information ratio,  Sterling ration (average return divided by the variability of below-average returns), Calmar ratio (average return divided by the worst peak-to-valley drawdown), and the Omega ratio (the sum of all positive returns divided by the sum of all negative returns). </li>
+<li><strong>Relationship with Other Strategies</strong> Many quants utilize several kinds of strategies at once. As such, the quant is effectively managing a <em>portfolio of strategies</em>. Comparing the results of the existing strategy with and without the new idea. A significant improvement in the results indicates that there is a synergistic relationship between the new idea and the existing strategy. </li>
+<li><strong>Time Dacay</strong> Many quants will seek to understand what their strategies’ returns would be if they must initiate trades on a lagged basis after they receive a trading signal.   <font color="#0099ff" size="3" face="黑体">Imagine that a researcher develops a strategy to trade stocks in response to changes in recommendations by Wall Street analysts. Increases in the level of analyst’s consensus recommendations for a company lead to a targeted long position in that company, whereas deterioration in the aggregate recommendation level would lead to a targeted short position in the company. This strategy is popular and followed by many quants. However, its effects are very short-lived and are very sensitive to the timing of the information received, since the downgrades/upgrades all take place before the market opened.</font>  As such, the quant trader must be careful not to allow his simulation to assume that he was able to transaction early enough to capture any of the information. </li>
+</ol>
+<ol start="11">
+<li><strong>Sensitivity to Specific Parameters</strong>  If E/P strategy results in a significantly different outcome  with slightly differing parameters, we should mistrust both results and use neither in out model. What many researchers look for is smoothness of the goodness of outcomes with respect to parameter values. Near-neighboring sets of parameters should result in fairly similar results, and if they don’t, a researcher should be a bit suspicious about them, because such results may indicate <em>overfitting</em>.</li>
+</ol>
+<p><font color="#0099ff" size="4" face="黑体">Overfitting </font><br>Overfitting a mode essentially implies that the researcher is asking too much of the data. The more classical defination is that a researcher has built a model that closely explains the past, but which is a pool guide to the future. This can happen in several ways. </p>
+<blockquote>
+<p>The researcher must be careful about the complexity of a model</p>
+</blockquote>
+<p>Complexity in a model can come from a couple of sources. One is the number of predictive factors. </p>
+<blockquote>
+<p>A researcher can create a very complex model in terms of the conditionalities utilized</p>
+</blockquote>
+<p>A simple model might call for a long position to be initiated in an instrument if that instrument is up more than some amount over the past 10 days. A more complex model might call for the long position to be initiated if the instrument is down over the past one day, up over the past 10 days, down over the past 20 days, and up over the past 100 days…<br>A related type of overfitting can be seen in strategies that trade only extremely infrequently. Here, we are concerned with the problem that a small number of trades, no matter how profitable, is unlikely to provide strong statistical significance.</p>
+<blockquote>
+<p>Specification of parameters</p>
+</blockquote>
+<p>For example, in constructing a trend model, a researcher is making the claim that some characteristic of the change in price over some period in the past is indicative of a likely future continuation of that move. There are several parameters one could imagine being relevant to such a model. For example,</p>
+<ul>
+<li>What is the historical period over which the price change is computed? </li>
+<li>If there is a minimum size for such a move to be considered significant, what is that minimum size? </li>
+</ul>
+<p>Quants can fix parameters in a few ways. One is to set them discretionarily, based on a prior conviction about how the markets function. The results of a backtest will then indicate how much promise the strategy has. A second approach to parameter fitting is to have a part of the backtest show the results of the strategy historically over a variety of parameter values, and to select the parameters that optimize the <em>goodness</em> of the result. This decision can be subjective or it can be done by an algorithm that reflects some rule-based approach to parameter selection.  One final note on parameter fitting is that parameters can either be fit once, or they can be fit repeatedly in the future, as new data are generated in the market. <font color="#0099ff" size="3" face="黑体"> However, the act of repeatedly fitting parameters itself increases the complexity of a model. And depending on exactly how such a re-fitting is implemented, this approach may also rely on fewer data than are desirable for an exercise so fraught with overfitting peril already.</font></p>
+<blockquote>
+<p>Capital markets generate an enormous amount of data. However, the data are extremely noisy</p>
+</blockquote>
+<p>For example, tick-size data. Past data yield extremely little information about future fluctuations. There is just very little signal buried in all that noise.  Something which, therefore, closely explains such a noisy process must be viewed with an extreme amount of skepticism. </p>
+<p><font color="#0099ff" size="4" face="黑体">Out-of-Sample Testing</font><br>The model’s parameters have by now been fixed using a different set of data (from the in-sample testing period), and it’s simply a question of whether the model, with whatever parameters are chosen, really works in a new, out-of-sample data set. </p>
+<p><strong>Statistics</strong></p>
+<blockquote>
+<p>Ratio of the R-square in the out-of-sample test to R-square in the in-sample test</p>
+</blockquote>
+<p>If the out-of-sample R-square is relatively close to the in-sample one, that is considered a good thing. If it is significantly smaller, the researcher must be suspicious about the prospects for his model’s success.  There are many approaches to out-of-sample testing. For example, the <em>rolling out-of-sample</em> technique in which the single oldest data point is discarded and one new data point is added to both the fitting (in-sample) and testing (out-of-sample) period. All the data that were set aside from the in-sample test are used in the out-of-sample test. The rolling out-of-sample technique is thought to help refresh the model over time so that it does not depend on a single set of tests that might have been run some years previously. However, depending on the circumstances, this approach can have the weakness of giving the model the benefit of constant knowledge of the recent past, which could reduce its robustness. Still another approach utilizes an ever-growing window of data for ongoing out-of-sample testing as time passes and more data are collected.   Though the objective of out-of-sample testing is clearly valid, it turns out to be a rather tricky thing to do correctly. <strong>Risk</strong>: regime switch + look-ahead bias (going back and forth between the in- and out-of-sample data). For example, the Internet bubble of the late 1990s.  Another appoach is to determine that out-of-sample testing is a bit of a myth in the first place, especially for any experienced, observant researcher.  As a result, out-of-sample testing is <font color="#0099ff" size="3" face="黑体">foregone in favor of a combination of extra vigilance regarding the in-sample results, coupled with a minimum of parameter fitting.</font>  In this methodology, the quant uses as few parameters as possible, sets the values at some reasonable level, and simply tests the strategy and looks for all those metrics of good performance to have sufficiently high readings. </p>
+<p><font color="#0099ff" size="4" face="黑体">Assumptions of Testing</font>  </p>
+<blockquote>
+<p>Transaction costs -&gt; frequency<br>Short availability</p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+        <div>
+    
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------End of File<i class="fa fa-paw"></i>Thanks for your reading-------------</div>
+    
+</div>
+    
+        </div>
+
+
+    
+
+    
+
+    
+
+    
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/blog/tags/Quant-Trading/" rel="tag"><i class="fa fa-tag"></i> Quant Trading</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2019/06/27/execution-and-transaction-cost-models/" rel="next" title="execution and transaction cost models">
+                <i class="fa fa-chevron-left"></i> execution and transaction cost models
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Kerry Yang</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/blog/archives/">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/blog/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/blog/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Idea-Generation"><span class="nav-number">1.</span> <span class="nav-text">Idea Generation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Testing"><span class="nav-number">2.</span> <span class="nav-text">Testing</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kerry Yang</span>
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  Visitor<span id="busuanzi_value_site_uv">|</span>
+</span>
+</div>
+
+  
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
